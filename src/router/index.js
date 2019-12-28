@@ -13,65 +13,121 @@ const routes = [
         component: Common,
         children: [{
             path: '',
-            name: 'Home',
+            name: 'home',
             component: Home,
-            meta: {
-                title: "Home",
-                isMeta: true
-            },
         }]
     },
-    // 退出系统  logout
+    // 分类
     {
-        path: '/logout',
+        path: '/category',
         component: Common,
         children: [{
             path: '',
-            name: 'logout',
+            name: 'category',
             component: () =>
-                import ('../views/logout/Logout'),
-            meta: {
-                title: "退出系统",
-                isMeta: true
-            },
+                import ('../views/category/Category'),
         }]
     },
-    // 登录页
+    // 购物车
+    {
+        path: '/shopingcars',
+        component: Common,
+        children: [{
+            path: '',
+            name: 'shopingcars',
+            component: () =>
+                import ('../views/shopingcars/shopingcars'),
+        }]
+    },
+    // 我的
+    {
+        path: '/mine',
+        component: Common,
+        children: [{
+            path: '',
+            name: 'mine',
+            component: () =>
+                import ('../views/user/Mine'),
+        }]
+    },
+    // 详情页
+    {
+        path: '/detail',
+        name: 'detail',
+        component: () =>
+            import ('../views/details/Deatils'),
+    },
+    // 城市
+    {
+        path: '/citys',
+        name: 'citys',
+        component: () =>
+            import ('../views/citys/Citys'),
+    },
+    // 订单结算 PayMent
+    {
+        path: '/payMent',
+        name: 'payMent',
+        component: () =>
+            import ('../views/payMent/PayMent'),
+    },
+    // 地址列表 address
+    {
+        path: '/address',
+        name: 'address',
+        component: () =>
+            import ('../views/address/Address'),
+    },
+    // 编辑地址 addressedit
+    {
+        path: '/addressedit',
+        name: 'addressedit',
+        component: () =>
+            import ('../views/addressedit/Addressedit'),
+    },
+    // 我的订单 order
+    {
+        path: '/order',
+        name: 'order',
+        component: () =>
+            import ('../views/order/Order'),
+    },
+    // 我的评价 evaluate
+    {
+        path: '/evaluate',
+        name: 'evaluate',
+        component: () =>
+            import ('../views/evaluate/Evaluate'),
+    },
+    // 评论 rate
+    {
+        path: '/rate',
+        name: 'rate',
+        component: () =>
+            import ('../views/rate/Rate'),
+    },
+    // 我的收藏 collect
+    {
+        path: '/collect',
+        name: 'collect',
+        component: () =>
+            import ('../views/collect/Collect'),
+    },
+    // 最近浏览 browes
+    {
+        path: '/browes',
+        name: 'browes',
+        component: () =>
+            import ('../views/browes/Browes'),
+    },
+    // 登录注册 login
     {
         path: '/login',
         name: 'login',
         component: () =>
             import ('../views/login/Login'),
-        meta: {
-            title: "登录",
-            isMeta: true
-        },
     },
-    // 注册页
-    {
-        path: '/register',
-        name: 'register',
-        component: () =>
-            import ('../views/login/Register'),
-        meta: {
-            title: "注册",
-            isMeta: true
-        },
-    },
-    // 错误路径
-    {
-        path: '*',
-        name: 'error',
-        component: () =>
-            import ('../views/Error/Error'),
-        meta: {
-            title: "错误",
-            isMeta: true
-        },
-    }
 ]
-
-
 const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
@@ -80,12 +136,12 @@ const router = new VueRouter({
 
 // router.beforeEach((to, from, next) => {
 //     document.title = to.meta.title
-// let username = localStorage.getItem('username')
-// if (to.path === '/login' || to.path === '/register') {
-//     next()
-// } else {
-//     username ? next() : next('/login')
-// }
+//         // let username = localStorage.getItem('username')
+//         // if (to.path === '/login' || to.path === '/register') {
+//         //     next()
+//         // } else {
+//         //     username ? next() : next('/login')
+//         // }
 // })
 
 export default router

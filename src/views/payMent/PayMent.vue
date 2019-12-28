@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <header>首页</header>
-    <span>欢迎来到后台管理平台</span>
-  </div>
+  <div>PayMent</div>
 </template>
 
 <script>
@@ -10,12 +7,10 @@ export default {
   data() {
     return {};
   },
-  components: {
-  },
+  components: {},
   methods: {},
   mounted() {},
   watch: {},
-
   computed: {}
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header>首页</header>
+    <mytop>购物车</mytop>
     <span>欢迎来到后台管理平台</span>
   </div>
 </template>

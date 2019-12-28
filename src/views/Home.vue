@@ -1,15 +1,25 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
+  <div>
+    <mytop>home</mytop>
+    <span>欢迎来到后台管理平台</span>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
-  name: 'home',
+  data() {
+    return {};
+  },
   components: {
-  }
-}
+  },
+  methods: {},
+  mounted() {},
+  watch: {},
+
+  computed: {}
+};
 </script>
+
+<style scoped lang='scss'>
+</style>

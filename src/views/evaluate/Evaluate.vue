@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <el-card>
-      <span>欢迎来到后台管理平台</span>
-    </el-card>
-  </div>
+  <div>evaluate</div>
 </template>
 
 <script>
 export default {
-  data() {},
+  data() {
+    return {};
+  },
   components: {},
   methods: {},
   mounted() {},

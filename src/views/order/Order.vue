@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img src="../../assets/error.jpg" />
-  </div>
+  <div>order</div>
 </template>
 
 <script>

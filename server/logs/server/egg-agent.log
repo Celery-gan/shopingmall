@@ -248,3 +248,24 @@
 2019-07-03 15:24:22,534 INFO 6160 [egg-watcher] Start watching: "C:\\Users\\Administrator\\Desktop\\vue商城项目\\server\\app.js"
 2019-07-03 15:24:22,535 INFO 6160 [egg-watcher:agent] watcher start success
 2019-07-03 15:24:22,563 INFO 6160 [egg:core] dump config after ready, 6ms
+2019-12-28 14:34:12,772 INFO 11852 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-12-28 14:34:12,784 INFO 11852 [egg:core] dump config after load, 8ms
+2019-12-28 14:34:12,844 INFO 11852 [egg-watcher] Start watching: ["C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"]
+2019-12-28 14:34:12,844 INFO 11852 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app"
+2019-12-28 14:34:12,844 INFO 11852 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config"
+2019-12-28 14:34:12,844 INFO 11852 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks"
+2019-12-28 14:34:12,844 INFO 11852 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy"
+2019-12-28 14:34:12,845 INFO 11852 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"
+2019-12-28 14:34:12,845 INFO 11852 [egg-watcher:agent] watcher start success
+2019-12-28 14:34:12,862 INFO 11852 [egg:core] dump config after ready, 8ms
+2019-12-28 14:34:17,728 WARN 11852 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-12-28 14:35:38,310 INFO 10764 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-12-28 14:35:38,319 INFO 10764 [egg:core] dump config after load, 5ms
+2019-12-28 14:35:38,372 INFO 10764 [egg-watcher] Start watching: ["C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"]
+2019-12-28 14:35:38,372 INFO 10764 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app"
+2019-12-28 14:35:38,373 INFO 10764 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config"
+2019-12-28 14:35:38,373 INFO 10764 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks"
+2019-12-28 14:35:38,373 INFO 10764 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy"
+2019-12-28 14:35:38,373 INFO 10764 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"
+2019-12-28 14:35:38,373 INFO 10764 [egg-watcher:agent] watcher start success
+2019-12-28 14:35:38,394 INFO 10764 [egg:core] dump config after ready, 12ms

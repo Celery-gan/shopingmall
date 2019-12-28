@@ -1,8 +1,6 @@
 <template>
-  <div class="exits">
-    <div>
-      <img src="../../assets/nono.jpg" title="点击退出" />
-    </div>
+  <div>
+    <mytop>分页</mytop>category
   </div>
 </template>
 
@@ -20,10 +18,4 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.exits {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 </style>
