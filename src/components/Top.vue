@@ -24,6 +24,6 @@ export default {
   width: 100%;
   line-height: 35px;
   text-align: center;
-border-bottom: 1px solid rgb(255, 235, 235);
+  border-bottom: 1px solid rgb(255, 235, 235);
 }
 </style>

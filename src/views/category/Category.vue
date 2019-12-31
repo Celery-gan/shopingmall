@@ -1,6 +1,8 @@
 <template>
   <div>
-    <mytop>分页</mytop>category
+    <mytop>
+      <van-nav-bar title="标题" left-text="返回" left-arrow></van-nav-bar>
+    </mytop>category
   </div>
 </template>
 
