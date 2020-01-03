@@ -108,7 +108,6 @@ export default {
       let width = 17 * 126;
       this.$refs.personTab.style.width = width + "px";
       // this.$nextTick 是一个异步函数，为了确保 DOM 已经渲染
-
       this.$nextTick(() => {
         if (!this.scroll) {
           this.scroll = new BScroll(this.$refs.personWrap, {
@@ -125,6 +124,7 @@ export default {
         }
       });
     },
+    // 加入购物车
     addShops(ids) {
       if (localStorage.getItem("nickname")) {
         this.$api

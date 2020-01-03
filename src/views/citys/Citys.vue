@@ -52,11 +52,8 @@
 </template>
 
 <script>
-// 引入 area city
 import Vue from "vue";
-// import area from "../../util/area";
 import city from "../../util/city";
-// Vue.prototype.area = area;
 Vue.prototype.city = city;
 export default {
   data() {

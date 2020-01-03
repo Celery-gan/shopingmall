@@ -5,33 +5,11 @@
       <div v-if="nu1!==1">
         <!-- 头部 -->
         <mytop>
-          <div class="flexbtw">
-            <!-- 定位城市 -->
-            <div v-if="city" class="citys" @click="gotocity(city)">
-              {{city}}
-              <van-icon name="arrow-down" />
-            </div>
-            <!-- 城市 没有加载出来时 显示加载动画 -->
-            <div v-else class="citys">
-              <van-loading type="spinner" size="20px"></van-loading>
-            </div>
-            <!-- 搜索框 -->
-            <van-search
-              class="searchs"
-              v-model="inputs"
-              placeholder="请输入搜索关键词"
-              show-action
-              shape="round"
-              @focus="onSearch"
-            >
-              <!-- 搜索按钮 -->
-              <div slot="action" @click="onSearch">搜索</div>
-            </van-search>
-          </div>
+          <homeheader :nu1="nu1" @send="send"></homeheader>
         </mytop>
         <!-- 主体部分 -->
         <!-- 页面上下平滑滚动 + 下拉刷新 -->
-        <refesh>
+        <refeshs>
           <!-- 轮播图 + 分类 + 广告图 + 滑动查看 -->
           <viewpager
             :images="images"
@@ -47,27 +25,34 @@
             :flinfo3="flinfo3"
             :hotgood="hotgood"
           ></floors>
-        </refesh>
+        </refeshs>
       </div>
-      <div v-else>111111</div>
+      <div v-else>
+        <homesearch :nu1="nu1" @send="send"></homesearch>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import refesh from "../components/pullrefush/Pullrefush";
+// 轮播图 + 分类 + 广告图 + 滑动查
 import viewpager from "../components/home/Viewpager.vue";
+// 楼层 + 热门
 import floors from "../components/home/Floors.vue";
+//没有搜索时的头部内容
+import homeheader from "../components/home/HomeHeader";
+//进入搜索时的页面内容
+import homesearch from "../components/home/HomSearch";
+
 export default {
   components: {
     viewpager,
     floors,
-    refesh
+    homeheader,
+    homesearch
   },
   data() {
     return {
-      // 输入框内容
-      inputs: "",
       // 定位城市
       city: "",
       // 搜索标识
@@ -90,17 +75,10 @@ export default {
       flinfo3: [],
       // 热门商品
       hotgood: []
+      // 输入框内容
     };
   },
   methods: {
-    // 搜索
-    onSearch() {
-      this.nu1 = 1;
-    },
-    // 前往citys页面 并且将目前地址传送过去
-    gotocity(val) {
-      this.$router.push({ name: "citys", query: { cityname: val } });
-    },
     // 获取需要的数据
     getrecommend() {
       this.$api
@@ -129,45 +107,12 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    send(nu1) {
+      this.nu1 = nu1;
     }
   },
   mounted() {
-    // 如果没有来自city的数据 定位获取当前城市
-    if (!this.$route.query.citiesname) {
-      let _this = this;
-      AMap.plugin("AMap.Geolocation", function() {
-        var geolocation = new AMap.Geolocation({
-          // 是否使用高精度定位，默认：true
-          enableHighAccuracy: true,
-          // 设置定位超时时间，默认：无穷大
-          timeout: 10000,
-          // 定位按钮的停靠位置的偏移量，默认：Pixel(10, 20)
-          buttonOffset: new AMap.Pixel(10, 20),
-          //  定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
-          zoomToAccuracy: true,
-          //  定位按钮的排放位置,  RB表示右下
-          buttonPosition: "RB"
-        });
-
-        geolocation.getCurrentPosition();
-        AMap.event.addListener(geolocation, "complete", onComplete);
-        AMap.event.addListener(geolocation, "error", onError);
-
-        function onComplete(data) {
-          // data是具体的定位信息
-          _this.city = data.addressComponent.city;
-          // console.log(_this.city);
-        }
-
-        function onError(data) {
-          // 定位出错
-        }
-      });
-    }
-    // 如果有来自citys页面的数据，则接受该地址信息
-    else {
-      this.city = this.$route.query.citiesname;
-    }
     this.getrecommend();
   },
   watch: {},
@@ -201,5 +146,10 @@ export default {
 .citys {
   font-size: 14px;
   margin: 3px;
+}
+//搜索历史
+.search-His {
+  margin: 2px 10px;
+  font-size: 14px;
 }
 </style>

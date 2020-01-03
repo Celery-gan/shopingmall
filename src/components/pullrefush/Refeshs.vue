@@ -1,11 +1,12 @@
+
 <template>
   <!-- 滑动模块 -->
   <div>
     <div>
       <!-- 页面上下平滑滚动 第一层盒子 -->
-      <div class="core-containers">
+      <div class="core-container">
         <!-- 第二层盒子 -->
-        <div class="wrappers" ref="wrapper">
+        <div class="wrapper" ref="wrapper">
           <!-- 第三层盒子 -->
           <div class="scroll-content">
             <!-- 下拉刷新 -->
@@ -57,8 +58,8 @@ export default {
 </script>
 
 <style lang='scss'>
-.core-containers {
-  .wrappers {
+.core-container {
+  .wrapper {
     height: 570px;
     overflow: hidden;
   }

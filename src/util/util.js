@@ -32,7 +32,7 @@ let vendor = (() => {
     return false
 })()
 const prefix = (style) => {
-    if (!vendor) {  //如果供应商有问题，直接return
+    if (!vendor) { //如果供应商有问题，直接return
         return false
     }
     if (vendor === 'standard') {
@@ -46,11 +46,11 @@ const prefix = (style) => {
  * @param arr 需要打乱的数组
  * @return Array 最终打乱的数组
  */
-const shuffle = function (arr) {
-    let _arr = arr.slice()  //不修改原数组
+const shuffle = function(arr) {
+    let _arr = arr.slice() //不修改原数组
     for (let i = 0; i < _arr.length; i++) {
         let j = getRandomInt(0, i)
-        // 变量的交换
+            // 变量的交换
         let t = _arr[i]
         _arr[i] = _arr[j]
         _arr[j] = t
@@ -64,7 +64,7 @@ const shuffle = function (arr) {
  * @param max 最大数字
  * @return 随机数
  */
-const getRandomInt = function (min, max) {
+const getRandomInt = function(min, max) {
     return (Math.random() * (max - min + 1) + min) | 0
 }
 
@@ -81,11 +81,11 @@ const throttle = (fn, dalay, atleast = 0) => {
     let timer = null
     let previous = null
     return (...args) => {
-        let now = +new Date()	//获取当前时间戳
-        !previous ? now : previous
+        let now = +new Date() //获取当前时间戳
+            !previous ? now : previous
         if (atleast && now - previous > atleast) {
             fn.apply(this, args)
-            // 重置上一次开始时间为本次结束时间
+                // 重置上一次开始时间为本次结束时间
             previous = now
             clearTimeout(timer)
         } else {
@@ -138,12 +138,12 @@ const cloneObj = (obj) => {
 }
 
 
-export {
-    chunk,              //数组分块
-    throttle,           //函数节流
-    debounce,           //函数防抖
-    prefix,             //各种浏览器的css前缀
-    getRandomInt,       //获取多少道多少之间的随机整数
-    shuffle,            //数组随机打乱(洗牌函数)
-    keyWord,            //搜索关键词高亮显示
+export default {
+    chunk, //数组分块
+    throttle, //函数节流
+    debounce, //函数防抖
+    prefix, //各种浏览器的css前缀
+    getRandomInt, //获取多少道多少之间的随机整数
+    shuffle, //数组随机打乱(洗牌函数)
+    keyWord, //搜索关键词高亮显示
 }
