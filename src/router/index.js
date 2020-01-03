@@ -127,6 +127,13 @@ const routes = [
         component: () =>
             import ('../views/login/Login'),
     },
+    // 我的详情 userdetail
+    {
+        path: '/userdetail',
+        name: 'userdetail',
+        component: () =>
+            import ('../views/userdetail/Userdetail'),
+    },
 ]
 const router = new VueRouter({
     mode: 'history',

@@ -2,17 +2,6 @@
   <div>
     <mytop>购物车</mytop>
     <refeshs>
-      <div class="cart-header">
-        <van-button type="primary" @click="checkAll" :checked="checked">全选</van-button>
-        <div v-if="amountpay != 0">
-          <van-button type="danger" class="cart-del" @click="delcart">删除</van-button>
-        </div>
-        <div v-if="amountpay != 0" class="cart-paymoney">
-          <div>总计：￥{{amountpay}}</div>
-          <div>请确认订单</div>
-        </div>
-      </div>
-
       <div v-if="nickname === ''">
         <div class="shopcarts"></div>
         <div class="shopcarts-login" @click="tologin">
@@ -20,6 +9,16 @@
         </div>
       </div>
       <div v-else>
+        <div class="cart-header">
+          <van-button type="primary" @click="checkAll" :checked="checked">全选</van-button>
+          <div v-if="amountpay != 0">
+            <van-button type="danger" class="cart-del" @click="delcart">删除</van-button>
+          </div>
+          <div v-if="amountpay != 0" class="cart-paymoney">
+            <div>总计：￥{{amountpay}}</div>
+            <div>请确认订单</div>
+          </div>
+        </div>
         <van-checkbox-group v-model="result" ref="checkboxGroup">
           <div v-for="(item,index) in goodsinfo" :key="item.id">
             <div class="cartitem-box">
@@ -110,7 +109,9 @@ export default {
     }
   },
   mounted() {
-    this.nickname = localStorage.getItem("nickname");
+    if (localStorage.getItem("nickname")) {
+      this.nickname = localStorage.getItem("nickname");
+    }
     this.getCards();
   },
   watch: {},

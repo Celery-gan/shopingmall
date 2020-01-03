@@ -26,7 +26,12 @@
           <div>运费：0</div>
           <div>剩余：{{goodsinfo.amount}}</div>
           <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
-          <div v-if="isCollect===0 && nickname" @click="collectGoods()">
+          <div v-if="nickname === ''" @click="collectGoods()">
+            收藏
+            <van-icon name="like-o" />
+          </div>
+          <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
+          <div v-else-if="isCollect === 0" @click="collectGoods()">
             收藏
             <van-icon name="like-o" />
           </div>
@@ -68,7 +73,7 @@
       </van-tabs>
     </refeshs>
     <!-- 4、 下方菜单栏 -->
-    <van-goods-action >
+    <van-goods-action>
       <!-- 4.1 联系客服 -->
       <van-goods-action-icon icon="chat-o" text="客服" />
       <!-- 4.2 前往购物车 -->
@@ -260,7 +265,7 @@ export default {
     },
     // 收藏某个商品
     collectGoods() {
-      if (this.nickname) {
+      if (this.nickname !== "") {
         this.$api
           .collection(this.goodsinfo)
           .then(res => {
@@ -337,7 +342,9 @@ export default {
     }
   },
   mounted() {
-    this.nickname = localStorage.getItem("nickname");
+    if (localStorage.getItem("nickname")) {
+      this.nickname = localStorage.getItem("nickname");
+    }
     this.ids = this.$route.query.ids;
     // 获取单个商品信息
     this.getGoodOne();

@@ -1,19 +1,114 @@
 <template>
-  <div>evaluate</div>
+  <div>
+    <mytop>
+      <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
+      <div>评价中心</div>
+      <div class="evaluate-bg">
+        <div>
+          <!-- 按钮选项 -->
+          <van-cell class="Evaluate-options">
+            <van-tabs v-model="activeName">
+              <van-tab title="待评价" name="a"></van-tab>
+              <van-tab title="已评价" name="b"></van-tab>
+            </van-tabs>
+          </van-cell>
+          <!-- 待评价页面 -->
+          <div v-if="activeName === 'a'">
+            <div v-if="tobeEvaluat.length===0" class="coming-soon">暂无待评价数据~~~</div>
+            <div v-else>
+              <div v-for="item in tobeEvaluat" :key="item.id">{{item}}</div>
+            </div>
+          </div>
+          <!-- 已评价页面 -->
+          <div v-if="activeName === 'b'">
+            <div v-if="alreadyEvaluat.length===0" class="coming-soon">暂无已评价数据~~~</div>
+            <div v-else>
+              <div v-for="item in alreadyEvaluat" :key="item.id">{{item}}</div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </mytop>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      activeName: "a",
+      alreadyEvaluat: [],
+      tobeEvaluat: []
+    };
   },
   components: {},
-  methods: {},
-  mounted() {},
+  methods: {
+    // 返回上一个页面
+    bcakbefore() {
+      history.back();
+    },
+    // 已评价
+    alreadyEvaluated() {
+      this.$api
+        .alreadyEvaluated()
+        .then(res => {
+          this.alreadyEvaluat = res.data.list;
+          console.log(this.alreadyEvaluat);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    // 待评价
+    tobeEvaluated() {
+      this.$api
+        .tobeEvaluated()
+        .then(res => {
+          this.tobeEvaluat = res.data.list;
+          console.log(this.tobeEvaluat);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  },
+  mounted() {
+    this.alreadyEvaluated();
+    this.tobeEvaluated();
+  },
   watch: {},
   computed: {}
 };
 </script>
 
 <style scoped lang='scss'>
+// 返回按钮样式
+.bcakHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.evaluate-bg {
+  background: url("../../assets/evaluate.jpg") no-repeat;
+  background-size: 100%;
+  height: 570px;
+  overflow: hidden;
+}
+.Evaluate-options {
+  width: 90%;
+  line-height: 30px;
+  border-radius: 20px;
+  margin: 170px auto 5px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 1px 1px 1px 1px rgb(209, 204, 204);
+}
+.coming-soon {
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  color: grey;
+}
 </style>

@@ -29,6 +29,8 @@ import utils from "./util/util.js";
 Vue.prototype.$utils = utils;
 
 
+import dayjs from "dayjs"
+Vue.prototype.$dayjs = dayjs
 
 Vue.config.productionTip = false
 

@@ -97,11 +97,11 @@ export default class Api {
      * comment  商品评论(id,rate,content, anonymous(是否匿名), _id, order_id, image=[])
      */
     static loginOut() {
-        return service.req(`/loginOut`)
+        return service.req(`/loginOut`, {})
     }
 
     static user() {
-        return service.req(`/queryUser`)
+        return service.req(`/queryUser`, {})
     }
 
     static saveUser({...args }) {
@@ -162,10 +162,8 @@ export default class Api {
         })
     }
 
-    static getCollection(page = 1) {
-        return service.req(`/collection/list`, {
-            params: { page }
-        })
+    static getCollection() {
+        return service.req(`/collection/list`)
     }
 
     static register(nickname, password, verify, sms) {
@@ -195,14 +193,12 @@ export default class Api {
         return service.req(`/myOrder`)
     }
 
-    static alreadyEvaluated({ page = 1 }) {
-        return service.req('/alreadyEvaluated', {
-            page
-        })
+    static alreadyEvaluated() {
+        return service.req('/alreadyEvaluated')
     }
 
-    static tobeEvaluated(page = 1) {
-        return service.req('/tobeEvaluated', page)
+    static tobeEvaluated() {
+        return service.req('/tobeEvaluated')
     }
 
     static evaluateOne(_id) {

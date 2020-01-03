@@ -1573,3 +1573,1061 @@ model: undefined
 pid: 9196
 hostname: USER-20191119MA
 
+2020-01-03 08:27:14,660 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 08:27:14,952 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:13:15,769 ERROR 6412 [-/127.0.0.1/-/48ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578017595733+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578017595733+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578017595733+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:13:17,778 ERROR 6412 [-/127.0.0.1/-/7ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578017597775+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578017597775+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578017597775+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:20:36,368 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018036364+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018036364+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018036364+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:20:38,099 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018038097+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018038097+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018038097+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:20:39,260 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018039258+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018039258+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018039258+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:21:15,744 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018075743+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018075743+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018075743+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:21:33,032 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018093030+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018093030+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018093030+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:22:55,127 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018175124+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018175124+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018175124+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:25:11,751 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018311750+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018311750+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018311750+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:25:40,323 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018340320+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018340320+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018340320+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:27:22,690 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018442688+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018442688+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018442688+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:27:55,736 ERROR 6412 [-/127.0.0.1/-/24ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018475714+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018475714+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018475714+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:30:54,600 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018654599+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018654599+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018654599+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:35:44,572 ERROR 6412 [-/127.0.0.1/-/5ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018944569+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578018944569+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578018944569+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:37:14,548 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019034546+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019034546+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019034546+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:37:15,661 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019035659+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019035659+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019035659+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:37:15,907 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019035905+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019035905+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019035905+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:37:16,096 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019036095+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019036095+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019036095+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:38:40,820 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019120818+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019120818+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019120818+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:38:42,563 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019122562+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019122562+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019122562+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:39:28,804 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019168803+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019168803+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019168803+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:39:50,291 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019190290+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019190290+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019190290+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:40:20,598 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019220596+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019220596+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019220596+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 10:40:32,490 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/saveUser] nodejs.ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019232489+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+ENOENTError: ENOENT: no such file or directory, open 'C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public\avatar\1578019232489+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png'
+errno: -4058
+code: "ENOENT"
+syscall: "open"
+path: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app\\public\\avatar\\1578019232489+10_bb++62l-l2aa35e0ab27fc5b76e167481f40e.png"
+name: "ENOENTError"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:15:38,489 ERROR 6412 [-/127.0.0.1/-/15ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:15:43,007 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:15:45,860 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:15:50,382 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:16:01,909 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:16:04,246 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebcb4b8d61e190c9e06ef') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebcb4b8d61e190c9e06ef') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:18:02,486 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:18:05,584 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:18:08,095 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebcb4b8d61e190c9e06ef') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebcb4b8d61e190c9e06ef') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:19:09,159 ERROR 6412 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebcb4b8d61e190c9e06ef') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebcb4b8d61e190c9e06ef') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 12:20:49,556 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 13:19:54,244 ERROR 6412 [-/127.0.0.1/-/8ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 13:23:20,086 ERROR 6412 [-/127.0.0.1/-/8ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ebb54b8d61e190c9e06ed') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:18:28,020 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:21:36,322 ERROR 6412 [-/127.0.0.1/-/8ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:22:32,946 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edd87b8d61e190c9e0707') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edd87b8d61e190c9e0707') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:28:43,662 ERROR 6412 [-/127.0.0.1/-/7ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ededab8d61e190c9e070b') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ededab8d61e190c9e070b') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:28:47,256 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:28:49,542 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:28:51,808 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:29:01,153 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:29:08,968 ERROR 6412 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:29:24,606 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:29:50,812 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:30:22,359 ERROR 6412 [-/127.0.0.1/-/10ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:31:06,418 ERROR 6412 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:36:25,164 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ededab8d61e190c9e070b') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ededab8d61e190c9e070b') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:40:22,304 ERROR 6412 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:40:29,884 ERROR 6412 [-/127.0.0.1/-/9ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:40:37,895 ERROR 6412 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:41:24,655 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:41:41,179 ERROR 6412 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0edf55b8d61e190c9e0713') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:47:56,652 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ededab8d61e190c9e070b') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ededab8d61e190c9e070b') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:48:13,963 ERROR 6412 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8d3b8d61e190c9e0704') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 14:48:32,681 ERROR 6412 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ede87b8d61e190c9e070a') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 15:43:10,565 ERROR 6412 [-/127.0.0.1/-/9ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 15:43:10,579 ERROR 6412 [-/127.0.0.1/-/2ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 15:43:10,588 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 15:49:33,675 ERROR 6412 [-/127.0.0.1/-/18ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ee347b8d61e190c9e071d') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ee347b8d61e190c9e071d') }"
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 15:58:40,251 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 16:47:32,805 ERROR 6412 [-/127.0.0.1/-/16ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 16:47:32,818 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 16:47:32,828 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 16:47:32,837 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 16:47:32,850 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 16:47:32,856 ERROR 6412 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{}" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{}\""
+kind: "string"
+value: {}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{}\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 6412
+hostname: USER-20191119MA
+
+2020-01-03 17:07:10,669 ERROR 6412 [-/127.0.0.1/-/24ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e0ed8b5b8d61e190c9e0703') }"
+pid: 6412
+hostname: USER-20191119MA
+

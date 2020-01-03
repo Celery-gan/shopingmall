@@ -1,7 +1,7 @@
 <template>
   <div class="mall-bg">
     <mytop>会员中心</mytop>
-    <div class="mine-header">
+    <div v-if="nickname" class="mine-header">
       <div class="mine-setting">
         <van-icon name="setting-o" color="#fff" @click="mineinfo" />
       </div>
@@ -11,44 +11,51 @@
       <div class="mine-welcome">欢迎您:{{nickname}}</div>
       <div class="mine-logout" @click="loginout">退出登录</div>
     </div>
+    <div v-else class="mine-header">
+      <div class="mine-picture">
+        <van-image round class="mine-imgs" />
+      </div>
+      <div class="mine-welcome">欢迎!!</div>
+      <div class="mine-logout" @click="gotologin">登录/注册</div>
+    </div>
 
     <div class="mine-status">
-      <div>
+      <div class="mine-condition" @click="gotoorder('b')">
         <van-icon name="cash-back-record" size="40" />
-        <div>待付款</div>
+        <div>待支付</div>
       </div>
-      <div>
+      <div class="mine-condition" @click="gotoorder('c')">
         <van-icon name="logistics" size="40" />
         <div>待发货</div>
       </div>
-      <div>
+      <div class="mine-condition" @click="gotoorder('d')">
         <van-icon name="points" size="40" />
         <div>待收货</div>
       </div>
-      <div>
+      <div class="mine-condition" @click="gotorate">
         <van-icon name="certificate" size="40" />
         <div>待评价</div>
       </div>
-      <div>
+      <div class="mine-condition" @click="gotoorder('e')">
         <van-icon name="like-o" size="40" />
         <div>已完成</div>
       </div>
     </div>
     <div class="mine-cell">
-      <van-cell title="全部订单" icon="description" is-link />
+      <van-cell title="全部订单" icon="description" is-link to="order" />
     </div>
     <div class="mine-cell">
       <div class="mine-none"></div>
     </div>
 
     <div class="mine-cell">
-      <van-cell title="收藏管理" icon="star-o" is-link />
+      <van-cell title="收藏管理" icon="star-o" is-link to="collect" />
     </div>
     <div class="mine-cell">
-      <van-cell title="地址管理" icon="location-o" is-link />
+      <van-cell title="地址管理" icon="location-o" is-link to="address" />
     </div>
     <div class="mine-cell">
-      <van-cell title="最近浏览" icon="browsing-history-o" is-link />
+      <van-cell title="最近浏览" icon="browsing-history-o" is-link to="browes" />
     </div>
   </div>
 </template>
@@ -60,11 +67,37 @@ export default {
   },
   components: {},
   methods: {
-    mineinfo() {},
-    loginout() {}
+    mineinfo() {
+      this.$router.push("/userdetail");
+    },
+    loginout() {
+      this.$api
+        .loginOut({})
+        .then(res => {
+          localStorage.removeItem("nickname");
+          localStorage.removeItem("SearchHistory");
+          this.$router.push("/");
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    gotologin() {
+      this.$router.push("/login");
+    },
+    // 前往订单
+    gotoorder(val) {
+      this.$router.push({ name: "order", query: { activeName: val } });
+    },
+    // 前往评价
+    gotorate(val) {
+      this.$router.push('/evaluate');
+    }
   },
   mounted() {
-    this.nickname = localStorage.getItem("nickname");
+    if (localStorage.getItem("nickname")) {
+      this.nickname = localStorage.getItem("nickname");
+    }
   },
   watch: {},
   computed: {}
@@ -94,7 +127,7 @@ export default {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  margin: 10px;
+  margin: 5px;
   color: #fff;
 }
 .mine-logout {
@@ -117,5 +150,8 @@ export default {
 .mine-none {
   height: 20px;
   background: rgb(255, 255, 255);
+}
+.mine-condition {
+  color: rgb(99, 99, 99);
 }
 </style>
