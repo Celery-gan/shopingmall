@@ -10,7 +10,7 @@
 
     <!-- 分类介绍 -->
     <div class="categorys flexbtw">
-      <div v-for="item in categorys" :key="item.id" @click="goto('/category')">
+      <div v-for="(item,index) in categorys" :key="item.id" @click="gotocate(index)">
         <img :src="item.image" class="category-img" />
         <div class="mallCategory-name">{{item.mallCategoryName}}</div>
       </div>
@@ -94,8 +94,8 @@ export default {
       });
     },
     // 路由的一般跳转
-    goto(path) {
-      this.$router.push(path);
+    gotocate(index) {
+      this.$router.push({name:'category',query:{cateindex:index}});
     },
     getData: function() {
       //此次用来加载数据（对应加载不同page下数据）

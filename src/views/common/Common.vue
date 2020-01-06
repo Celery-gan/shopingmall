@@ -7,8 +7,8 @@
       <van-tabbar route>
         <van-tabbar-item replace to="/" icon="home-o">商城</van-tabbar-item>
         <van-tabbar-item replace to="/category" icon="search">分类</van-tabbar-item>
-        <van-tabbar-item replace to="/shopingcars" icon="search">购物车</van-tabbar-item>
-        <van-tabbar-item replace to="/mine" icon="search">我的</van-tabbar-item>
+        <van-tabbar-item replace to="/shopingcars" icon="cart-o" :info="amountgoods">购物车</van-tabbar-item>
+        <van-tabbar-item replace to="/mine" icon="manager-o">我的</van-tabbar-item>
       </van-tabbar>
     </div>
   </div>
@@ -29,7 +29,11 @@ export default {
   },
   mounted() {},
   watch: {},
-  computed: {}
+  computed: {
+    amountgoods() {
+      return this.$store.state.amountgoods;
+    }
+  }
 };
 </script>
 

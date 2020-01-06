@@ -12,21 +12,33 @@
               <van-tab title="已评价" name="b"></van-tab>
             </van-tabs>
           </van-cell>
-          <!-- 待评价页面 -->
-          <div v-if="activeName === 'a'">
-            <div v-if="tobeEvaluat.length===0" class="coming-soon">暂无待评价数据~~~</div>
-            <div v-else>
-              <div v-for="item in tobeEvaluat" :key="item.id">{{item}}</div>
+          <refeshs>
+            <!-- 待评价页面 -->
+            <div v-if="activeName === 'a'">
+              <div v-if="tobeEvaluat.length===0" class="coming-soon">暂无待评价数据~~~</div>
+              <div v-else>
+                <div v-for="item in tobeEvaluat" :key="item.id">
+                  <van-card :title="item.name" :thumb="item.image_path">
+                    <div slot="footer" class="cartitem-footer">
+                      <van-button type="primary" plain round size="mini" @click="gotoEval">
+                        <van-icon name="chat-o" />评价晒单
+                      </van-button>
+                    </div>
+                  </van-card>
+                </div>
+              </div>
             </div>
-          </div>
-          <!-- 已评价页面 -->
-          <div v-if="activeName === 'b'">
-            <div v-if="alreadyEvaluat.length===0" class="coming-soon">暂无已评价数据~~~</div>
-            <div v-else>
-              <div v-for="item in alreadyEvaluat" :key="item.id">{{item}}</div>
+            <!-- 已评价页面 -->
+            <div v-if="activeName === 'b'">
+              <div v-if="alreadyEvaluat.length===0" class="coming-soon">暂无已评价数据~~~</div>
+              <div v-else>
+                <div v-for="item in alreadyEvaluat" :key="item.id">
+                  <van-card :title="item.name" :thumb="item.image_path" />
+                </div>
+              </div>
             </div>
-          </div>
-          <!--  -->
+            <!--  -->
+          </refeshs>
         </div>
       </div>
     </mytop>
@@ -42,7 +54,7 @@ export default {
       tobeEvaluat: []
     };
   },
-  components: {},
+  components: { },
   methods: {
     // 返回上一个页面
     bcakbefore() {
@@ -65,12 +77,18 @@ export default {
       this.$api
         .tobeEvaluated()
         .then(res => {
+          console.log(res);
           this.tobeEvaluat = res.data.list;
           console.log(this.tobeEvaluat);
+          console.log(this.tobeEvaluat.length);
+          this.$store.state.tobeEvaluats = this.tobeEvaluat.length;
         })
         .catch(err => {
           console.log(err);
         });
+    },
+    gotoEval() {
+      this.$router.push("/rate");
     }
   },
   mounted() {

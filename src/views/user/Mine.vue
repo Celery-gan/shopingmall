@@ -33,7 +33,7 @@
         <div>待收货</div>
       </div>
       <div class="mine-condition" @click="gotorate">
-        <van-icon name="certificate" size="40" />
+        <van-icon name="certificate" size="40" :info="tobeEvaluats" />
         <div>待评价</div>
       </div>
       <div class="mine-condition" @click="gotoorder('e')">
@@ -91,7 +91,7 @@ export default {
     },
     // 前往评价
     gotorate(val) {
-      this.$router.push('/evaluate');
+      this.$router.push("/evaluate");
     }
   },
   mounted() {
@@ -100,7 +100,11 @@ export default {
     }
   },
   watch: {},
-  computed: {}
+  computed: {
+    tobeEvaluats() {
+      return this.$store.state.tobeEvaluats;
+    }
+  }
 };
 </script>
 

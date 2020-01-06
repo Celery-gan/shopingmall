@@ -2,35 +2,56 @@
   <div>
     <mytop>购物车</mytop>
     <refeshs>
+      <!-- 如果未登录 页面内容提示前往登录 -->
       <div v-if="nickname === ''">
         <div class="shopcarts"></div>
         <div class="shopcarts-login" @click="tologin">
           <van-button round type="default">去登录</van-button>
         </div>
       </div>
+      <!-- 如果已登录 显示购物车内容 -->
       <div v-else>
         <div class="cart-header">
+          <!-- 全选按钮 -->
           <van-button type="primary" @click="checkAll" :checked="checked">全选</van-button>
+          <!-- 如果有商品被选中 删除按钮 -->
           <div v-if="amountpay != 0">
             <van-button type="danger" class="cart-del" @click="delcart">删除</van-button>
           </div>
+          <!-- 如果有商品被选中 去结算按钮 -->
+          <div v-if="amountpay != 0">
+            <van-button type="primary" class="cart-del" @click="gotopay">去结算</van-button>
+          </div>
+          <!-- 如果有商品被选中 金额统计 -->
           <div v-if="amountpay != 0" class="cart-paymoney">
             <div>总计：￥{{amountpay}}</div>
             <div>请确认订单</div>
           </div>
         </div>
+        <!-- 商品列表 -->
         <van-checkbox-group v-model="result" ref="checkboxGroup">
           <div v-for="(item,index) in goodsinfo" :key="item.id">
             <div class="cartitem-box">
+              <!-- 复选框 -->
               <van-checkbox :name="index" v-model="item.check" @click="checkitem(index)"></van-checkbox>
+              <!-- 商品内容 -->
               <van-card
-                :num="item.count"
                 :price="item.mallPrice"
                 :title="item.name"
                 :thumb="item.image_path"
                 class="cartitem-info"
-                @click="gotos(item.cid)"
-              />
+              >
+                <!-- 步进器 -->
+                <div slot="footer" class="cartitem-footer">
+                  <van-stepper
+                    v-model="item.count"
+                    min="2"
+                    max="10"
+                    integer
+                    @change="editCart(item)"
+                  />
+                </div>
+              </van-card>
             </div>
           </div>
         </van-checkbox-group>
@@ -64,9 +85,12 @@ export default {
     // 全选
     checkAll() {
       this.checked = !this.checked;
+      this.$refs.checkboxGroup.toggleAll(this.checked);
+      // this.checked = !this.checked;
       this.goodsinfo.map(item => {
         item.check = this.checked;
       });
+      // console.log(this.goodsinfo);
     },
     // 前往登录
     tologin() {
@@ -77,7 +101,6 @@ export default {
       this.$api
         .getCard({})
         .then(res => {
-          // console.log(res.shopList);
           this.goodsinfo = res.shopList;
           this.goodsinfo.map(item => {
             item.mallPrice = item.mallPrice.toFixed(2);
@@ -87,25 +110,51 @@ export default {
           console.log(err);
         });
     },
-    // 选择某个
+    // 选择某个商品
     checkitem(index) {
-      // console.log(index);
       this.goodsinfo[index].check = !this.goodsinfo[index].check;
     },
     // 删除
     delcart() {
+      let delarr = [];
       this.arr.map(item => {
-        console.log(item.cid);
-        this.$api
-          .deleteShop(item.cid)
-          .then(res => {
-            console.log(res);
-            // this.getCards();
-          })
-          .catch(err => {
-            console.log(err);
-          });
+        delarr.push(item.cid);
       });
+      this.$api
+        .deleteShop(delarr)
+        .then(res => {
+          this.getCards();
+          this.$toast.success(res.msg);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    gotopay() {
+      let idlist = [];
+      let count = 0;
+      this.arr.map(item => {
+        idlist.push(item.cid);
+        count += item.count;
+      });
+      let obj = {
+        orderId: idlist,
+        totalPrice: this.amountpay,
+        count: count,
+        list: this.arr
+      };
+      this.$router.push({ name: "payMent", query: { paylist: obj } });
+    },
+    // 修改商品量
+    editCart(val) {
+      this.$api
+        .editCart(val.count, val.cid, val.mallPrice)
+        .then(res => {
+          // console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   mounted() {
@@ -131,6 +180,14 @@ export default {
         });
       }
       return sum.toFixed(2);
+    },
+    amountgoods() {
+      let sum = 0;
+      this.goodsinfo.map(item => {
+        sum += item.count;
+      });
+      this.$store.state.amountgoods = sum;
+      return sum;
     }
   }
 };
@@ -164,8 +221,11 @@ export default {
   margin: 0 5px;
 }
 .cart-paymoney {
-  margin-left: 90px;
+  margin-left: 20px;
   font-size: 12px;
   line-height: 20px;
+}
+.cartitem-footer {
+  z-index: 5;
 }
 </style>

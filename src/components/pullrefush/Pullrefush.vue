@@ -59,7 +59,7 @@ export default {
 <style lang='scss'>
 .core-containers {
   .wrappers {
-    height: 570px;
+    height: 620px;
     overflow: hidden;
   }
 }

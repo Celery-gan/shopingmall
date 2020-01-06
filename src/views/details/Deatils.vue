@@ -77,15 +77,15 @@
       <!-- 4.1 联系客服 -->
       <van-goods-action-icon icon="chat-o" text="客服" />
       <!-- 4.2 前往购物车 -->
-      <van-goods-action-icon v-if="cartcount===0" icon="cart-o" text="购物车" @click="jumpto" />
+      <van-goods-action-icon v-if="amountgoods===0" icon="cart-o" text="购物车" @click="jumpto" />
       <van-goods-action-icon
-        v-else-if="cartcount>99"
+        v-else-if="amountgoods>99"
         icon="cart-o"
         info="99+"
         text="购物车"
         @click="jumpto"
       />
-      <van-goods-action-icon v-else icon="cart-o" text="购物车" :info="cartcount" @click="jumpto" />
+      <van-goods-action-icon v-else icon="cart-o" text="购物车" :info="amountgoods" @click="jumpto" />
       <!-- 4.3 加入购物车 -->
       <van-goods-action-button type="warning" text="加入购物车" @click="showbuy = true" />
       <!-- 4.4 立即购买 -->
@@ -139,8 +139,6 @@ export default {
       comments: [],
       // 本地存储的用户名
       nickname: "",
-      // 购物车数量
-      cartcount: 0,
       // 购买商品页 默认隐藏
       showbuy: false,
       sku: {
@@ -322,23 +320,15 @@ export default {
       }
     },
     // 立即购买
-    onBuyClicked() {
-      let obj = this.goodsinfo;
-      console.log(obj);
-      this.$router.push({ name: "payMent", query: { goodsinfo: obj } });
-    },
-    getCards() {
-      this.cartcount = 0;
-      this.$api
-        .getCard({})
-        .then(res => {
-          res.shopList.map(item => {
-            this.cartcount += item.count;
-          });
-        })
-        .catch(err => {
-          console.log(err);
-        });
+    onBuyClicked(skuData) {
+      let obj = {
+        count: skuData.selectedNum,
+        list: this.goodsinfo
+      };
+      this.$router.push({
+        name: "payMent",
+        query: { goodsinfo: obj }
+      });
     }
   },
   mounted() {
@@ -353,7 +343,11 @@ export default {
     this.getCards();
   },
   watch: {},
-  computed: {}
+  computed: {
+    amountgoods() {
+      return this.$store.state.amountgoods;
+    }
+  }
 };
 </script>
 

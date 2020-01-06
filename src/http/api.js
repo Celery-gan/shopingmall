@@ -46,7 +46,7 @@ export default class Api {
     }
 
     static deleteShop(id) {
-        return service.req('/deleteShop', id)
+        return service.post('/deleteShop', id)
     }
 
     // ===============================================================================================================

@@ -2,7 +2,7 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>我的订单</div>
+      <div>评价中心</div>
     </mytop>
   </div>
 </template>

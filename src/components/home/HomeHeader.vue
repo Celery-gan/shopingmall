@@ -43,8 +43,8 @@ export default {
     // 搜索
     onSearch() {
       this.nu1 = 1;
-    
-       this.$emit("send", this.nu1);
+
+      this.$emit("send", this.nu1);
     },
     // 前往citys页面 并且将目前地址传送过去
     gotocity(val) {

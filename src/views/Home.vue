@@ -89,6 +89,7 @@ export default {
           this.images = res.data.slides;
           // 分类样式
           this.categorys = res.data.category;
+          this.$store.state.category = res.data.category
           // 广告图
           this.advertes = res.data.advertesPicture.PICTURE_ADDRESS;
           // 商品推荐
