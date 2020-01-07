@@ -5,8 +5,9 @@
       <div>最近浏览</div>
     </mytop>
 
-    <!-- 循环显示商品信息 -->
-    <!-- <van-cell v-for="item in Collections" :key="item.id">
+    <div v-if="nickname !== ''">
+      <!-- 循环显示商品信息 -->
+      <van-cell v-for="(item,index) in browsing" :key="item.id">
         <div class="mysearch-list">
           <div @click="gotos(item.id)">
             <img :src="item.image_path" class="search-img" />
@@ -15,13 +16,14 @@
             <div v-html="item.name" class="goods-name" @click="gotos(item.id)"></div>
             <div class="goods-price">
               <div class="persent-price" @click="gotos(item.id)">￥{{item.present_price}}</div>
-              <div @click="delcollect(item)">
+              <div @click="delbros(index)">
                 <img src="../../assets/cuo.png" class="collect-delbtn" />
               </div>
             </div>
           </div>
         </div>
-    </van-cell>-->
+      </van-cell>
+    </div>
   </div>
 </template>
 
@@ -46,6 +48,9 @@ export default {
           ids: val
         }
       });
+    },
+    delbros(index) {
+      this.$store.state.browsing.splice(index, 1);
     }
   },
   mounted() {
@@ -54,7 +59,11 @@ export default {
     }
   },
   watch: {},
-  computed: {}
+  computed: {
+    browsing() {
+      return this.$store.state.browsing;
+    }
+  }
 };
 </script>
 
@@ -65,5 +74,34 @@ export default {
   top: 0;
   left: 0;
   z-index: 999;
+}
+// 搜索结果 flex排列
+.mysearch-list {
+  display: flex;
+  height: 80px;
+}
+// 搜索结果的图片大小设置
+.search-img {
+  width: 70px;
+  margin: 0 10px;
+}
+.goods-name {
+  margin: 0 8px;
+  line-height: 20px;
+}
+.goods-price {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.persent-price {
+  color: red;
+  margin: 8px;
+}
+.collect-delbtn {
+  width: 20px;
 }
 </style>

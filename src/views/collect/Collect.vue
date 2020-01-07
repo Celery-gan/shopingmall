@@ -9,13 +9,13 @@
       <!-- 循环显示商品信息 -->
       <van-cell v-for="item in Collections" :key="item.id">
         <div class="mysearch-list">
-          <div @click="gotos(item.id)">
+          <div @click="gotos(item.cid)">
             <img :src="item.image_path" class="search-img" />
           </div>
           <div>
-            <div v-html="item.name" class="goods-name" @click="gotos(item.id)"></div>
+            <div v-html="item.name" class="goods-name" @click="gotos(item.cid)"></div>
             <div class="goods-price">
-              <div class="persent-price" @click="gotos(item.id)">￥{{item.present_price}}</div>
+              <div class="persent-price" @click="gotos(item.cid)">￥{{item.present_price}}</div>
               <div @click="delcollect(item)">
                 <img src="../../assets/cuo.png" class="collect-delbtn" />
               </div>

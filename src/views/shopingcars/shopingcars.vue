@@ -45,7 +45,7 @@
                 <div slot="footer" class="cartitem-footer">
                   <van-stepper
                     v-model="item.count"
-                    min="2"
+                    min="1"
                     max="10"
                     integer
                     @change="editCart(item)"
@@ -86,11 +86,9 @@ export default {
     checkAll() {
       this.checked = !this.checked;
       this.$refs.checkboxGroup.toggleAll(this.checked);
-      // this.checked = !this.checked;
       this.goodsinfo.map(item => {
         item.check = this.checked;
       });
-      // console.log(this.goodsinfo);
     },
     // 前往登录
     tologin() {
@@ -132,10 +130,10 @@ export default {
     },
     gotopay() {
       let idlist = [];
-      let count = 0;
+      let count = this.arr[0].count;
       this.arr.map(item => {
         idlist.push(item.cid);
-        count += item.count;
+        // count += item.count;
       });
       let obj = {
         orderId: idlist,
@@ -143,7 +141,9 @@ export default {
         count: count,
         list: this.arr
       };
-      this.$router.push({ name: "payMent", query: { paylist: obj } });
+      this.$store.state.paylists = obj;
+      this.$store.state.buyway = 2;
+      this.$router.push({ name: "payMent" });
     },
     // 修改商品量
     editCart(val) {

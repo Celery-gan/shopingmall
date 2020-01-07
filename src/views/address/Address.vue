@@ -45,11 +45,9 @@ export default {
     },
     // 编辑地址
     onEdit(item, index) {
-      // console.log(item.id);
       let addinfos = this.addresslist.filter(item1 => {
         return item1._id === item.id;
       });
-
       this.$router.push({
         name: "addressedit",
         query: { addinfo: addinfos[0] }
@@ -60,13 +58,11 @@ export default {
         .getAddress(this.ids)
         .then(res => {
           this.addresslist = res.address;
-          // console.log(this.addresslist);
           this.addresslist.map(item => {
             if (item.isDefault === true) {
               this.chosenAddressId = item._id;
             }
-            let obj = {};
-            obj = {
+            let obj = {
               name: item.name,
               address: `${item.province}${item.city}${item.county}${item.addressDetail}`,
               id: item._id,
@@ -83,6 +79,7 @@ export default {
     // 选择地址
     choose(item) {
       this.chosenAddressId = item.id;
+      this.$store.state.addresslist = item;
     }
   },
   mounted() {

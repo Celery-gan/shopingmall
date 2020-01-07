@@ -506,3 +506,20 @@
 2020-01-06 08:28:27,234 INFO 7796 [egg-mongoose] instance[0] start successfully
 2020-01-06 08:28:27,243 INFO 7796 [egg-watcher:application] watcher start success
 2020-01-06 08:28:27,264 INFO 7796 [egg:core] dump config after ready, 18ms
+2020-01-07 08:08:56,936 INFO 7212 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-01-07 08:08:57,058 INFO 7212 [egg-multipart] stream mode enable
+2020-01-07 08:08:59,519 INFO 7212 [egg-mongoose] connecting mongodb://127.0.0.1/shoppingMall
+2020-01-07 08:09:01,853 INFO 7212 [egg-static] starting static serve /public/ -> C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\public
+2020-01-07 08:09:01,870 INFO 7212 [egg-security] use methodnoallow middleware
+2020-01-07 08:09:01,875 INFO 7212 [egg-security] use noopen middleware
+2020-01-07 08:09:01,889 INFO 7212 [egg-security] use nosniff middleware
+2020-01-07 08:09:01,893 INFO 7212 [egg-security] use xssProtection middleware
+2020-01-07 08:09:01,897 INFO 7212 [egg-security] use xframe middleware
+2020-01-07 08:09:01,900 INFO 7212 [egg-security] use dta middleware
+2020-01-07 08:09:01,900 INFO 7212 [egg-security] compose 6 middlewares into one security middleware
+2020-01-07 08:09:02,016 INFO 7212 [egg:core] dump config after load, 12ms
+2020-01-07 08:09:02,022 INFO 7212 [egg-mongoose] starting...
+2020-01-07 08:09:02,194 INFO 7212 [egg-mongoose] mongodb://127.0.0.1/shoppingMall connected successfully
+2020-01-07 08:09:02,214 INFO 7212 [egg-mongoose] instance[0] start successfully
+2020-01-07 08:09:02,223 INFO 7212 [egg-watcher:application] watcher start success
+2020-01-07 08:09:02,245 INFO 7212 [egg:core] dump config after ready, 20ms

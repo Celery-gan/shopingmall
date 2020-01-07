@@ -112,7 +112,6 @@ export default {
         if (!this.scroll) {
           this.scroll = new BScroll(this.$refs.personWrap, {
             startX: 0,
-            click: true,
             // 水平方向滚动
             scrollX: true,
             // 忽略竖直方向的滚动

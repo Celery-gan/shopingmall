@@ -5,9 +5,10 @@
       <div>订单结算</div>
     </mytop>
     <refeshs>
-      <div>
-        <!-- <van-cell> -->
-        <van-cell icon="location-o" is-link>
+      <!-- 收货信息  -->
+      <!-- 如果有地址 显示地址 -->
+      <div v-if="addlist.name !== undefined">
+        <van-cell icon="location-o" is-link @click="gotoaddress">
           <div class="flexbtw">
             <div>{{`收货人：${addlist.name}`}}</div>
             <div>{{`联系方式：${addlist.tel}`}}</div>
@@ -15,16 +16,23 @@
           <div>{{`收货地址：${addlist.address}`}}</div>
         </van-cell>
       </div>
+      <!-- 如果没有地址 前往添加地址 -->
+      <div v-else>
+        <van-cell icon="location-o" is-link @click="gotoaddress">
+          <div>添加地址</div>
+        </van-cell>
+      </div>
+      <!-- 商品信息 -->
       <div>
-        <!-- 直接购买 -->
+        <!-- 如果是直接购买 页面内容 -->
         <van-card
-          v-if="this.$route.query.goodsinfo"
+          v-if="this.buyway === 1"
           :num="buynum"
-          :price="goods.present_price"
-          :title="goods.name"
-          :thumb="goods.image_path"
+          :price="goodsone.present_price"
+          :title="goodsone.name"
+          :thumb="goodsone.image_path"
         />
-        <!-- 购物车购买 -->
+        <!-- 购物车购买 页面内容 -->
         <div v-else v-for="item in goods" :key="item.id">
           <van-card
             :num="item.count"
@@ -33,8 +41,10 @@
             :thumb="item.image_path"
           />
         </div>
+        <!--  -->
       </div>
     </refeshs>
+    <!-- 提交订单 -->
     <van-submit-bar :price="piceses" button-text="提交订单" @submit="placeOrder" />
   </div>
 </template>
@@ -43,120 +53,138 @@
 export default {
   data() {
     return {
-      nickname: "",
-      useraddress: "",
-      usertel: "",
-      chosenAddressId: "1",
+      // 购买对应的商品信息数组
       goods: [],
-      count: 1,
+      // 默认地址对象
       DefaultAddress: {},
+      // 默认地址修改后的地址对象
       addlist: {},
-      buynum: ""
+      // 直接购买数量
+      buynum: "",
+      goodsone: {}
     };
   },
   components: {},
   methods: {
+    // 返回上页
     bcakbefore() {
       history.back();
     },
-    addAddress() {
-      // 前往地址列表
-      this.$router.push("/address");
-    },
+    // 获取默认地址
     getDefaultAddress() {
       this.$api
         .getDefaultAddress()
         .then(res => {
-          this.DefaultAddress = res.defaultAdd;
-          this.addlist = {
-            name: this.DefaultAddress.name,
-            address: `${this.DefaultAddress.province}${this.DefaultAddress.city}${this.DefaultAddress.county}${this.DefaultAddress.addressDetail}`,
-            id: this.DefaultAddress._id,
-            tel: this.DefaultAddress.tel,
-            isDefault: this.DefaultAddress.isDefault
-          };
+          //如果有默认地址 将该默认地址交给默认地址对象
+          if (res.defaultAdd !== null) {
+            this.DefaultAddress = res.defaultAdd;
+            // 默认地址修改后的地址对象 以便页面获取显示
+            this.addlist = {
+              name: this.DefaultAddress.name,
+              address: `${this.DefaultAddress.province}${this.DefaultAddress.city}${this.DefaultAddress.county}${this.DefaultAddress.addressDetail}`,
+              id: this.DefaultAddress._id,
+              tel: this.DefaultAddress.tel,
+              isDefault: this.DefaultAddress.isDefault
+            };
+          }
         })
         .catch(err => {
           console.log(err);
         });
     },
+    // 提交订单
     placeOrder() {
-      let obj = {};
-      if (this.$route.query.paylist) {
-        obj = {
-          tel: this.addlist.tel,
-          address: this.addlist.address,
-          count: this.paylist.count,
-          idDirect: "",
-          totalPrice: this.paylist.totalPrice,
-          orderId: this.paylist.orderId
-        };
-      } else if (this.$route.query.goodsinfo) {
-        let ids = [];
-        ids.push(this.goods.id);
-        obj = {
-          tel: this.addlist.tel,
-          address: this.addlist.address,
-          count: this.buynum,
-          idDirect: true,
-          totalPrice: this.piceses,
-          orderId: ids
-        };
+      // 当有地址时可以提交
+      if (this.addlist.id !== undefined) {
+        let obj = {};
+        if (this.buyway === 2) {
+          obj = {
+            tel: this.addlist.tel,
+            address: this.addlist.address,
+            count: this.paylist.count,
+            idDirect: Boolean(false),
+            orderId: this.paylist.orderId
+          };
+        } else if (this.buyway === 1) {
+          let ids = [];
+          ids.push(this.goodsone.id);
+          console.log(ids);
+          obj = {
+            tel: this.addlist.tel,
+            address: this.addlist.address,
+            count: this.buynum,
+            idDirect: true,
+            orderId: ids
+          };
+        }
+        console.log(obj);
+        this.$api
+          .placeOrder(obj)
+          .then(res => {
+            console.log(res);
+            // 弹框提示 返回首页
+            this.$toast.success(res.msg);
+            this.$router.push("/");
+          })
+          .catch(err => {
+            console.log(err);
+          });
       }
-      console.log(obj);
-      this.$api
-        .placeOrder(obj)
-        .then(res => {
-          // console.log(res);
-          // 如果是来自购物车的数据 购物车这些商品信息删除
-          if (res.code === 200 && this.$route.query.paylist) {
-            this.$api
-              .deleteShop(this.paylist.orderId)
-              .then(res1 => {})
-              .catch(err1 => {
-                console.log(err1);
-              });
-          }
-          // 弹框提示 返回首页
-          this.$toast.success(res.msg);
-          this.$router.push("/");
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      // 如果没有地址 提示添加收货地址
+      else {
+        this.$toast.fail("请选择收货地址");
+      }
+    },
+    // 前往地址列表
+    gotoaddress() {
+      this.$router.push("/address");
     }
   },
   mounted() {
-    // 获取单个商品信息
-    if (this.$route.query.goodsinfo) {
-      this.buynum = this.$route.query.goodsinfo.count;
-      console.log(this.buynum);
-      this.goods = this.$route.query.goodsinfo.list;
-      // // 商品信息的价格取两位小数
-      this.goods.present_price = Number(this.goods.present_price).toFixed(2);
-      console.log(this.goods);
+    // console.log(this.buyway);
+    // 如果来自立即购买 buyway=1
+    if (this.buyway === 1) {
+      this.buynum = this.payone.count;
+      this.goodsone = this.payone.list;
+      this.goodsone.present_price = Number(this.goodsone.present_price).toFixed(
+        2
+      );
     }
-    // 如果传过来数组
-    if (this.$route.query.paylist) {
-      this.buynum = this.$route.query.paylist.count;
-      this.paylist = this.$route.query.paylist;
-      console.log(this.paylist);
-      this.goods = this.$route.query.paylist.list;
-      console.log(this.goods);
+    // 如果来自购物车 buyway=2
+    else if (this.buyway === 2) {
+      this.buynum = this.paylists.count;
+      this.paylist = this.paylists;
+      this.goods = this.paylists.list;
     }
-    // 获得默认地址
-    this.getDefaultAddress();
+    // 获得地址信息
+    if (!this.addresslist) {
+      this.getDefaultAddress();
+    } else {
+      this.addlist = this.addresslist;
+    }
   },
   watch: {},
   computed: {
+    addresslist() {
+      return this.$store.state.addresslist;
+    },
+    buyway() {
+      return this.$store.state.buyway;
+    },
+    paylists() {
+      return this.$store.state.paylists;
+    },
+    payone() {
+      return this.$store.state.payone;
+    },
     // 计算商品的价格
     piceses() {
-      if (this.$route.query.goodsinfo) {
+      if (this.buyway === 1) {
         let sum = 0;
-        sum += this.buynum * this.goods.present_price;
+        sum += this.buynum * this.goodsone.present_price;
         return sum * 100;
-      } else if (this.$route.query.paylist) {
-        return this.$route.query.paylist.totalPrice * 100;
+      } else if (this.buyway === 2) {
+        return this.paylists.totalPrice * 100;
       }
     }
   }

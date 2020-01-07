@@ -106,6 +106,13 @@ const routes = [
         component: () =>
             import ('../views/rate/Rate'),
     },
+    // 查看评价 Seeeval
+    {
+        path: '/seeeval',
+        name: 'seeeval',
+        component: () =>
+            import ('../views/Seeeval/Seeeval'),
+    },
     // 我的收藏 collect
     {
         path: '/collect',

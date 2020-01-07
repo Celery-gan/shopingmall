@@ -50,7 +50,6 @@ export default {
     return {
       activeKey: 0,
       active: 0,
-      // categorys: [],
       catelist: [],
       bxMallSubDtos: []
     };

@@ -87,7 +87,8 @@
       />
       <van-goods-action-icon v-else icon="cart-o" text="购物车" :info="amountgoods" @click="jumpto" />
       <!-- 4.3 加入购物车 -->
-      <van-goods-action-button type="warning" text="加入购物车" @click="showbuy = true" />
+      <van-goods-action-button type="warning" text="加入购物车" @click="onAddCartClicked" />
+      <!-- <van-goods-action-button type="warning" text="加入购物车" @click="showbuy = true" /> -->
       <!-- 4.4 立即购买 -->
       <van-goods-action-button type="danger" text="立即购买" @click="showbuy = true" />
     </van-goods-action>
@@ -162,7 +163,7 @@ export default {
         // 值：skuValueId（规格值 id）
         s1: "1215",
         // 初始选中数量
-        selectedNum: 2
+        selectedNum: 1
       }
     };
   },
@@ -310,7 +311,6 @@ export default {
           .addShop(this.ids)
           .then(res => {
             this.$toast.success(res.msg);
-            this.getCards();
           })
           .catch(err => {
             console.log(err);
@@ -325,10 +325,9 @@ export default {
         count: skuData.selectedNum,
         list: this.goodsinfo
       };
-      this.$router.push({
-        name: "payMent",
-        query: { goodsinfo: obj }
-      });
+      this.$store.state.payone = obj;
+      this.$store.state.buyway = 1;
+      this.$router.push({ name: "payMent" });
     }
   },
   mounted() {
@@ -340,13 +339,18 @@ export default {
     this.getGoodOne();
     // 查看商品是否被收藏
     this.getisCollection();
-    this.getCards();
   },
   watch: {},
   computed: {
     amountgoods() {
       return this.$store.state.amountgoods;
     }
+  },
+  beforeRouteLeave(to, from, next) {
+    if (!this.$store.state.browsing.some(item => item.id === this.ids)) {
+      this.$store.state.browsing.push(this.goodsinfo);
+    }
+    next();
   }
 };
 </script>

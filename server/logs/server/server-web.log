@@ -5106,3 +5106,697 @@ name: "CastError"
 pid: 7796
 hostname: USER-20191119MA
 
+2020-01-07 09:55:26,798 ERROR 7212 [-/127.0.0.1/-/21ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 09:55:53,296 ERROR 7212 [-/127.0.0.1/-/8ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 09:55:55,756 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 09:55:59,335 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 09:56:02,533 ERROR 7212 [-/127.0.0.1/-/8ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 09:56:05,473 ERROR 7212 [-/127.0.0.1/-/6ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 13:34:49,672 ERROR 7212 [-/127.0.0.1/-/17ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 13:34:50,843 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 13:34:51,272 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 13:34:54,362 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 13:34:54,654 ERROR 7212 [-/127.0.0.1/-/1ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 13:34:55,476 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:17:45,609 ERROR 7212 [-/127.0.0.1/-/23ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:17:49,795 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:17:59,702 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e4f21f855f1c2cd52322') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:18:02,505 ERROR 7212 [-/127.0.0.1/-/10ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:18:05,690 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:18:18,236 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e13e5211f855f1c2cd52324') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 14:25:23,852 ERROR 7212 [-/127.0.0.1/-/9ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e14239b1f855f1c2cd5233a') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e14239b1f855f1c2cd5233a') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 15:14:15,633 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e142ed31f855f1c2cd52341') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e142ed31f855f1c2cd52341') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 15:14:19,620 ERROR 7212 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e142ed31f855f1c2cd52341') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e142ed31f855f1c2cd52341') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 15:26:58,790 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430601f855f1c2cd52345') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430601f855f1c2cd52345') }"
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:08:44,069 ERROR 7212 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:08:52,461 ERROR 7212 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:11:09,655 ERROR 7212 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:11:33,750 ERROR 7212 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:11:35,254 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:11:52,481 ERROR 7212 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:12:50,567 ERROR 7212 [-/127.0.0.1/-/1ms POST /v1/order] nodejs.TypeError: Cannot read property 'length' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:178:42)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 16:14:38,029 ERROR 7212 [-/127.0.0.1/-/2ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:03:57,291 ERROR 7212 [-/127.0.0.1/-/5ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:04:05,021 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:04:37,564 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:05:02,629 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:05:12,892 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:06:01,359 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:08:00,578 ERROR 7212 [-/127.0.0.1/-/6ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:08:28,509 ERROR 7212 [-/127.0.0.1/-/3ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:08:56,322 ERROR 7212 [-/127.0.0.1/-/7ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+
+2020-01-07 17:12:13,506 ERROR 7212 [-/127.0.0.1/-/4ms POST /v1/order] nodejs.TypeError: Cannot read property 'count' of undefined
+    at OperatingGoodsController.order (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:197:34)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 7212
+hostname: USER-20191119MA
+

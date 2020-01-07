@@ -55,7 +55,7 @@ export default class Api {
      * placeOrder 提交订单 参数：address:收货地址,tel:电话，orderId：所有商品的id，totalPrice：总价格,idDirect:用来判断是购物车结算还是直接购买,count:商品数量
      */
     static placeOrder({...args }) {
-        return service.req('/order', args)
+        return service.post('/order', args)
     }
 
     // ===============================================================================================================
@@ -113,7 +113,7 @@ export default class Api {
     }
 
     static comment({...args }) {
-            return service.req(`/goodsOne/comment`, args)
+            return service.post(`/goodsOne/comment`, args)
         }
         // ===============================================================================================================
         /**
