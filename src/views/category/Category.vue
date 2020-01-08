@@ -1,7 +1,7 @@
 <template>
   <div>
     <mytop>
-      <van-nav-bar title="分类" left-arrow></van-nav-bar>
+      <van-nav-bar title="分类"></van-nav-bar>
     </mytop>
     <div>
       <refeshs>
@@ -70,6 +70,7 @@ export default {
         });
     },
     change(name) {
+      this.active = 0;
       this.getcategory();
     },
     // 路由跳转到详情页 传参为商品id

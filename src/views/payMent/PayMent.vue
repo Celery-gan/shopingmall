@@ -7,7 +7,7 @@
     <refeshs>
       <!-- 收货信息  -->
       <!-- 如果有地址 显示地址 -->
-      <div v-if="addlist.name !== undefined">
+      <div v-if="addlist.id !== undefined">
         <van-cell icon="location-o" is-link @click="gotoaddress">
           <div class="flexbtw">
             <div>{{`收货人：${addlist.name}`}}</div>
@@ -97,6 +97,7 @@ export default {
       // 当有地址时可以提交
       if (this.addlist.id !== undefined) {
         let obj = {};
+        // 如果来自购物车 buyway=2
         if (this.buyway === 2) {
           obj = {
             tel: this.addlist.tel,
@@ -105,7 +106,9 @@ export default {
             idDirect: Boolean(false),
             orderId: this.paylist.orderId
           };
-        } else if (this.buyway === 1) {
+        }
+        // 如果来自立即购买 buyway=1
+        else if (this.buyway === 1) {
           let ids = [];
           ids.push(this.goodsone.id);
           console.log(ids);
@@ -117,11 +120,9 @@ export default {
             orderId: ids
           };
         }
-        console.log(obj);
         this.$api
           .placeOrder(obj)
           .then(res => {
-            console.log(res);
             // 弹框提示 返回首页
             this.$toast.success(res.msg);
             this.$router.push("/");
@@ -157,7 +158,7 @@ export default {
       this.goods = this.paylists.list;
     }
     // 获得地址信息
-    if (!this.addresslist) {
+    if (this.addresslist.id === undefined) {
       this.getDefaultAddress();
     } else {
       this.addlist = this.addresslist;

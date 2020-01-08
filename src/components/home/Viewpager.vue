@@ -2,8 +2,8 @@
   <!-- 轮播图 + 分类 + 广告图 + 滑动查看 -->
   <div>
     <!-- 轮播图  -->
-    <van-swipe :autoplay="3000" class="swipe-box">
-      <van-swipe-item v-for="(item) in images" :key="item.id">
+    <van-swipe :autoplay="3000" class="swipe-box" :stop-propagation="false">
+      <van-swipe-item v-for="(item) in images" :key="item.id" @click="gotos(item.goodsId)">
         <img :src="item.image" class="imgs" />
       </van-swipe-item>
     </van-swipe>
@@ -95,7 +95,7 @@ export default {
     },
     // 路由的一般跳转
     gotocate(index) {
-      this.$router.push({name:'category',query:{cateindex:index}});
+      this.$router.push({ name: "category", query: { cateindex: index } });
     },
     getData: function() {
       //此次用来加载数据（对应加载不同page下数据）

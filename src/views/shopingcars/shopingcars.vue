@@ -1,19 +1,33 @@
 <template>
   <div>
-    <mytop>购物车</mytop>
+    <mytop>
+      <van-nav-bar title="购物车"></van-nav-bar>
+    </mytop>
     <refeshs>
       <!-- 如果未登录 页面内容提示前往登录 -->
       <div v-if="nickname === ''">
         <div class="shopcarts"></div>
+        <div class="msg">亲，你还没有登录哟~~</div>
         <div class="shopcarts-login" @click="tologin">
           <van-button round type="default">去登录</van-button>
         </div>
       </div>
-      <!-- 如果已登录 显示购物车内容 -->
+      <!-- 如果已登录 但是 购物车没有商品 -->
+      <div v-else-if="goodsinfo.length === 0">
+        <div class="shopcarts"></div>
+        <div class="msg">你的购物车空空的~~~~</div>
+        <div class="shopcarts-login" @click="gotos">
+          <van-button round type="default">去购物</van-button>
+        </div>
+      </div>
+      <!-- 如果已登录 且 购物车有商品 -->
       <div v-else>
         <div class="cart-header">
           <!-- 全选按钮 -->
-          <van-button type="primary" @click="checkAll" :checked="checked">全选</van-button>
+          <div class="check">
+            <van-switch v-model="checked" @click="checkAll" />
+            <div>全选</div>
+          </div>
           <!-- 如果有商品被选中 删除按钮 -->
           <div v-if="amountpay != 0">
             <van-button type="danger" class="cart-del" @click="delcart">删除</van-button>
@@ -73,14 +87,8 @@ export default {
   },
   components: {},
   methods: {
-    // 路由跳转到详情页 传参为商品id
-    gotos(val) {
-      this.$router.push({
-        name: "detail",
-        query: {
-          ids: val
-        }
-      });
+    gotos() {
+      this.$router.push("/");
     },
     // 全选
     checkAll() {
@@ -100,9 +108,12 @@ export default {
         .getCard({})
         .then(res => {
           this.goodsinfo = res.shopList;
+          let sum = 0;
           this.goodsinfo.map(item => {
+            sum += item.count;
             item.mallPrice = item.mallPrice.toFixed(2);
           });
+          this.$store.state.amountgoods = sum;
         })
         .catch(err => {
           console.log(err);
@@ -111,6 +122,9 @@ export default {
     // 选择某个商品
     checkitem(index) {
       this.goodsinfo[index].check = !this.goodsinfo[index].check;
+      this.checked = this.goodsinfo.every(item => {
+        return item.check;
+      });
     },
     // 删除
     delcart() {
@@ -173,21 +187,12 @@ export default {
           return item.check === true;
         });
         this.arr.map(item => {
-          // console.log(item);
           if (item) {
             sum += Number(item.mallPrice) * item.count;
           }
         });
       }
       return sum.toFixed(2);
-    },
-    amountgoods() {
-      let sum = 0;
-      this.goodsinfo.map(item => {
-        sum += item.count;
-      });
-      this.$store.state.amountgoods = sum;
-      return sum;
     }
   }
 };
@@ -227,5 +232,14 @@ export default {
 }
 .cartitem-footer {
   z-index: 5;
+}
+.check {
+  display: flex;
+  align-items: center;
+}
+.msg {
+  margin: 10px auto;
+  text-align: center;
+  width: 200px;
 }
 </style>

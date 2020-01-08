@@ -2,16 +2,26 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>我的评价</div>
+      <van-nav-bar title="我的评价"></van-nav-bar>
     </mytop>
     <div>
-      <van-card
-        :num="myrates.goods[0].count"
-        :price="myrates.goods[0].mallPrice"
-        :title="myrates.goods[0].name"
-        :thumb="myrates.goods[0].image"
-        @click="onAddCartClicked"
-      />
+      <div class="myrate-header">
+        <div>
+          <img src="../../assets/evaluate.jpg" class="user-img" />
+          <van-rate v-model="myrates.rate" readonly />
+        </div>
+        <div>{{myrates.comment_time}}</div>
+      </div>
+      <div class="myrate-header">评价内容：{{myrates.content}}</div>
+      <div class="myrate-body">
+        <div>
+          <img :src="arr.image_path" class="myrate-img" />
+        </div>
+        <div class="myrate-font">
+          {{arr.name}}
+          <van-icon name="shopping-cart-o" color="red" @click="onAddCartClicked" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,7 +30,8 @@
 export default {
   data() {
     return {
-      myrates: {}
+      myrates: {},
+      arr: {}
     };
   },
   components: {},
@@ -33,7 +44,7 @@ export default {
     onAddCartClicked() {
       if (localStorage.getItem("nickname")) {
         this.$api
-          .addShop(this.myrates.goods[0].id)
+          .addShop(this.arr.id)
           .then(res => {
             this.$toast.success(res.msg);
             this.getCards();
@@ -49,7 +60,8 @@ export default {
   mounted() {
     if (this.$route.query.myrate) {
       this.myrates = this.$route.query.myrate;
-      console.log(this.myrates);
+      this.arr = this.myrates.goods[0];
+      // console.log(this.myrates);
     }
   },
   watch: {},
@@ -64,5 +76,26 @@ export default {
   top: 0;
   left: 0;
   z-index: 999;
+}
+.myrate-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.myrate-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px dashed rgb(240, 240, 240);
+}
+.user-img {
+  width: 40px;
+}
+.myrate-img {
+  width: 100px;
+}
+.myrate-font {
+  width: 220px;
+  margin: auto 10px;
 }
 </style>

@@ -48,12 +48,6 @@
 
 <script>
 export default {
-  // props: {
-  //   nu1: {
-  //     type: Number,
-  //     default: ""
-  //   }
-  // },
   data() {
     return {
       inputs: "",
@@ -67,29 +61,30 @@ export default {
   methods: {
     // 根据输入框输入内容获取对应的商品列表
     getsearch() {
-      this.$api
-        .search(this.inputs)
-        .then(res => {
-          // 获得搜索列表
-          this.searchlist = res.data.list;
-          console.log(this.searchlist);
-          // 将搜索列表中关键字高亮设置
-          this.searchlist.map(
-            item => (item.name = this.$utils.keyWord(item.name, this.inputs))
-          );
-          // 将搜索词存入搜索历史列表
-          let flag = this.SearchHistory.every(item => {
-            return item !== this.inputs;
+      setTimeout(() => {
+        this.$api
+          .search(this.inputs)
+          .then(res => {
+            // 获得搜索列表
+            this.searchlist = res.data.list;
+            // 将搜索列表中关键字高亮设置
+            this.searchlist.map(
+              item => (item.name = this.$utils.keyWord(item.name, this.inputs))
+            );
+            // 将搜索词存入搜索历史列表
+            let flag = this.SearchHistory.every(item => {
+              return item !== this.inputs;
+            });
+            if (flag || this.SearchHistory.length < 1) {
+              this.SearchHistory.push(this.inputs);
+              // 将搜索历史列表存在本地
+              localStorage.setItem("SearchHistory", this.SearchHistory);
+            }
+          })
+          .catch(err => {
+            console.log(err);
           });
-          if (flag || this.SearchHistory.length < 1) {
-            this.SearchHistory.push(this.inputs);
-            // 将搜索历史列表存在本地
-            localStorage.setItem("SearchHistory", this.SearchHistory);
-          }
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      }, 1000);
     },
     // 删除搜索历史
     delHistory() {

@@ -153,7 +153,7 @@ export default class Api {
     }
 
     static postAddress({...args }) {
-        return service.req(`/address`, args)
+        return service.post(`/address`, args)
     }
 
     static deleteAddress(id) {

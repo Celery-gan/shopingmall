@@ -2,7 +2,7 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>评价中心</div>
+      <van-nav-bar title="评价中心"></van-nav-bar>
     </mytop>
     <div class="evaluate-bg">
       <div>
@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import evalrefs from "../../components/evaluate/Evaluateref";
 export default {
   data() {
     return {
@@ -61,7 +62,9 @@ export default {
       tobeEvaluat: []
     };
   },
-  components: {},
+  components: {
+    evalrefs
+  },
   methods: {
     // 返回上一个页面
     bcakbefore() {
@@ -86,7 +89,6 @@ export default {
         .alreadyEvaluated()
         .then(res => {
           this.alreadyEvaluat = res.data.list;
-          // console.log(this.alreadyEvaluat);
         })
         .catch(err => {
           console.log(err);

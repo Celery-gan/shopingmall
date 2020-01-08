@@ -3,7 +3,7 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>我的资料</div>
+      <van-nav-bar title="我的资料"></van-nav-bar>
     </mytop>
     <div>
       <van-cell-group>
@@ -22,7 +22,8 @@
         <!-- 邮箱 -->
         <van-field v-model="userinfo.email" type="email" label="邮箱" placeholder="请输入邮箱" />
         <!-- 出生年月 -->
-        <van-field v-model="Birthday" label="出生年月" @click="showPopup" />
+        <van-cell v-model="Birthday" title="出生年月" @click="showPopup" />
+        <!-- <van-field v-model="Birthday" label="出生年月" @click="showPopup" /> -->
         <!-- 保存按钮 -->
         <van-button type="primary" block class="user-btn" @click="conserve">保存</van-button>
         <!-- 取消按钮 -->
@@ -159,7 +160,6 @@ export default {
     }
   },
   mounted() {
-    // console.log(area);
     this.getuserinfo();
   },
   watch: {},

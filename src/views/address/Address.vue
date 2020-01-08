@@ -2,10 +2,10 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>地址列表</div>
+      <van-nav-bar title="地址列表"></van-nav-bar>
     </mytop>
     <div v-if="nickname !== ''">
-      <div v-if="this.addresslist.length < 1">
+      <div v-if="addresslist.length < 1">
         <div class="address-none">暂无收货数据~~</div>
         <van-address-list @add="onAdd" />
       </div>

@@ -6,23 +6,28 @@
     </mytop>
 
     <div v-if="nickname !== ''">
-      <!-- 循环显示商品信息 -->
-      <van-cell v-for="(item,index) in browsing" :key="item.id">
-        <div class="mysearch-list">
-          <div @click="gotos(item.id)">
-            <img :src="item.image_path" class="search-img" />
-          </div>
-          <div>
-            <div v-html="item.name" class="goods-name" @click="gotos(item.id)"></div>
-            <div class="goods-price">
-              <div class="persent-price" @click="gotos(item.id)">￥{{item.present_price}}</div>
-              <div @click="delbros(index)">
-                <img src="../../assets/cuo.png" class="collect-delbtn" />
+      <div v-if="browsing.length < 1">
+        <div class="address-none">暂无浏览历史~~</div>
+      </div>
+      <div v-else>
+        <!-- 循环显示商品信息 -->
+        <van-cell v-for="(item,index) in browsing" :key="item.id">
+          <div class="mysearch-list">
+            <div @click="gotos(item.id)">
+              <img :src="item.image_path" class="search-img" />
+            </div>
+            <div>
+              <div v-html="item.name" class="goods-name" @click="gotos(item.id)"></div>
+              <div class="goods-price">
+                <div class="persent-price" @click="gotos(item.id)">￥{{item.present_price}}</div>
+                <div @click="delbros(index)">
+                  <img src="../../assets/cuo.png" class="collect-delbtn" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </van-cell>
+        </van-cell>
+      </div>
     </div>
   </div>
 </template>
@@ -38,7 +43,7 @@ export default {
   methods: {
     // 返回上一个页面
     bcakbefore() {
-      history.back();
+     this.$router.push('/mine')
     },
     // 点击搜索出来的商品 前往商品详情页
     gotos(val) {
@@ -103,5 +108,11 @@ export default {
 }
 .collect-delbtn {
   width: 20px;
+}
+.address-none {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgb(202, 202, 202);
 }
 </style>

@@ -4,9 +4,11 @@
     <div class="mall-bg">
       <div v-if="nu1!==1">
         <!-- 头部 -->
-        <mytop>
-          <homeheader :nu1="nu1" @send="send"></homeheader>
-        </mytop>
+        <van-sticky>
+          <mytop>
+            <homeheader :nu1="nu1" @send="send"></homeheader>
+          </mytop>
+        </van-sticky>
         <!-- 主体部分 -->
         <!-- 页面上下平滑滚动 + 下拉刷新 -->
         <refeshs>
@@ -89,8 +91,7 @@ export default {
           this.images = res.data.slides;
           // 分类样式
           this.categorys = res.data.category;
-          this.$store.state.category = res.data.category
-          // 广告图
+          this.$store.state.category = res.data.category; // 广告图
           this.advertes = res.data.advertesPicture.PICTURE_ADDRESS;
           // 商品推荐
           this.recommends = res.data.recommend;
@@ -141,7 +142,7 @@ export default {
   flex-wrap: wrap;
 }
 .searchs {
-  width: 300px;
+  width: 77%;
   padding: 3px 2px;
 }
 .citys {

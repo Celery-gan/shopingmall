@@ -2,27 +2,32 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>我的收藏</div>
+      <van-nav-bar title="我的收藏"></van-nav-bar>
     </mytop>
 
     <div v-if="nickname !== ''">
       <!-- 循环显示商品信息 -->
-      <van-cell v-for="item in Collections" :key="item.id">
-        <div class="mysearch-list">
-          <div @click="gotos(item.cid)">
-            <img :src="item.image_path" class="search-img" />
-          </div>
-          <div>
-            <div v-html="item.name" class="goods-name" @click="gotos(item.cid)"></div>
-            <div class="goods-price">
-              <div class="persent-price" @click="gotos(item.cid)">￥{{item.present_price}}</div>
-              <div @click="delcollect(item)">
-                <img src="../../assets/cuo.png" class="collect-delbtn" />
+      <div v-if="Collections.length < 1">
+        <div class="address-none">暂无收藏商品~~</div>
+      </div>
+      <div v-else>
+        <van-cell v-for="item in Collections" :key="item.id">
+          <div class="mysearch-list">
+            <div @click="gotos(item.cid)">
+              <img :src="item.image_path" class="search-img" />
+            </div>
+            <div>
+              <div v-html="item.name" class="goods-name" @click="gotos(item.cid)"></div>
+              <div class="goods-price">
+                <div class="persent-price" @click="gotos(item.cid)">￥{{item.present_price}}</div>
+                <div @click="delcollect(item)">
+                  <img src="../../assets/cuo.png" class="collect-delbtn" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </van-cell>
+        </van-cell>
+      </div>
     </div>
   </div>
 </template>
@@ -39,7 +44,7 @@ export default {
   methods: {
     // 返回上一个页面
     bcakbefore() {
-      history.back();
+      this.$router.push('/mine')
     },
     tologin() {
       this.$router.push("/login");
@@ -127,5 +132,11 @@ export default {
 }
 .collect-delbtn {
   width: 20px;
+}
+.address-none {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgb(202, 202, 202);
 }
 </style>

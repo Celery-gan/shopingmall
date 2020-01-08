@@ -1,6 +1,5 @@
 <template>
   <!-- 详情页 -->
-
   <div class="mall-bg">
     <van-sticky>
       <!-- 头部 返回按钮 -->
@@ -8,11 +7,13 @@
         <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
       </mytop>
     </van-sticky>
-    <!-- 1、轮播图 点击使show为true 显示预览 -->
+
     <refeshs>
-      <van-swipe :autoplay="3000" class="swipe-img">
-        <van-swipe-item v-for="(item) in images" :key="item.id" @click="show = true">
-          <img :src="item" class="detail-imgs" />
+      <!-- 1、轮播图 点击使show为true 显示预览 -->
+      <van-swipe :autoplay="3000" class="swipe-img" @change="onChanges" :stop-propagation="false">
+        <van-swipe-item v-for="(item,index) in images" :key="item.id">
+          <img :src="item" class="detail-imgs" @click="show = true" />
+          <div class="custom-indicator" slot="indicator">{{ index + 1 }}/4</div>
         </van-swipe-item>
       </van-swipe>
       <!-- 1.1、 预览图片 默认隐藏 当show为true时显示 -->
@@ -26,19 +27,19 @@
           <div>运费：0</div>
           <div>剩余：{{goodsinfo.amount}}</div>
           <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
-          <div v-if="nickname === ''" @click="collectGoods()">
+          <div v-if="nickname === ''" @click="collectGoods">
             收藏
-            <van-icon name="like-o" />
+            <van-icon name="like-o" color="red" />
           </div>
           <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
-          <div v-else-if="isCollect === 0" @click="collectGoods()">
+          <div v-else-if="isCollect === 0" @click="collectGoods">
             收藏
-            <van-icon name="like-o" />
+            <van-icon name="like-o" color="red" />
           </div>
           <!-- 2.1.2 在登录状态下 并且已收藏 可以点击取消收藏 -->
-          <div v-else @click="cancelCollect()">
+          <div v-else @click="cancelCollect">
             取消收藏
-            <van-icon name="like" />
+            <van-icon name="like" color="red" />
           </div>
         </div>
         <!-- 2.2 店铺名 + 进入店铺 -->
@@ -67,7 +68,40 @@
           <div v-else>
             <!-- 3.2商品评价 -->
             <div v-if="comments.length === 0" class="goodsinfo-comments">暂无数据</div>
-            <div v-else>{{comments}}</div>
+            <div v-else>
+              <!--  comments 所有的评论 -->
+              <div v-for="item in comments" :key="item.id">
+                <!-- 3.2.1 匿名评价 -->
+                <div v-if="item.anonymous">
+                  <div class="comments-header">
+                    <div class="comments-user">
+                      <img :src="item.comment_avatar" class="user-img" />
+                      <div>
+                        <div>{{item.comment_nickname}}</div>
+                        <van-rate v-model="item.rate" />
+                      </div>
+                    </div>
+                    <div class="comments-time">{{item.comment_time}}</div>
+                  </div>
+                  <div class="comment-content">{{item.content}}</div>
+                </div>
+                <!-- 3.2.2 实名评价 -->
+                <div v-else>
+                  <div class="comments-header">
+                    <div class="comments-user">
+                      <img :src="item.user[0].avatar" class="user-img" />
+                      <div>
+                        <div>{{item.user[0].nickname}}</div>
+                        <van-rate v-model="item.rate" />
+                      </div>
+                    </div>
+                    <div class="comments-time">{{item.comment_time}}</div>
+                  </div>
+                  <div class="comment-content">{{item.content}}</div>
+                </div>
+              </div>
+              <!-- comments end -->
+            </div>
           </div>
         </van-tab>
       </van-tabs>
@@ -96,14 +130,10 @@
     sku 商品sku数据
     goods 商品信息
     goods-id 商品 id
-    price-tag 显示在价格后面的标签
     hide-stock 是否显示商品剩余库存
     hide-quota-text 是否显示限购提示
     quota	限购数，0 表示不限购
-    hide-selected-text 是否隐藏已选提示
-    stock-threshold 库存阈值。低于这个值会把库存数高亮显示
-    show-add-cart-btn 是否显示加入购物车按钮
-    buy-text 购买按钮文字-->
+    show-add-cart-btn 是否显示加入购物车按钮-->
     <van-sku
       v-model="showbuy"
       :sku="sku"
@@ -132,6 +162,7 @@ export default {
       show: false,
       // 预览图的每个图的图标
       index: 0,
+      current: "",
       // 轮播图数组
       images: [],
       // 收藏与否标识
@@ -156,7 +187,7 @@ export default {
       // 限购量
       quota: 10,
       // 起售量
-      startSaleNum: 2,
+      startSaleNum: 1,
       // initialSku 默认选中的 sku
       initialSku: {
         // 键：skuKeyStr（sku 组合列表中当前类目对应的 key 值）
@@ -178,9 +209,8 @@ export default {
       this.$api
         .goodOne(this.ids)
         .then(res => {
-          // console.log(this.goodsinfo);
-          // comments 剩余量
           this.comments = res.goods.comment;
+          // console.log(this.comments);
           // goodsinfo 获取单个商品信息
           this.goodsinfo = res.goods.goodsOne;
           // 预览图的图片数组
@@ -209,6 +239,7 @@ export default {
               k_s: "s1" // skuKeyStr：sku 组合列表（下方 list）中当前类目对应的 key 值，value 值会是从属于当前类目的一个规格值 id
             }
           ];
+
           this.goods = {
             // 商品标题
             title: this.goodsinfo.name,
@@ -270,6 +301,7 @@ export default {
           .then(res => {
             // 弹框提示
             this.$toast.success(res.msg);
+            // console.log(res);
             // 重新查看商品是否被收藏
             this.getisCollection();
           })
@@ -277,7 +309,16 @@ export default {
             console.log(err);
           });
       } else {
-        this.$toast.fail("未检测到登录记录，请先登录");
+        // this.$toast.fail("未检测到登录记录，请先登录");
+
+        this.$dialog
+          .confirm({
+            message: "未检测到登录记录，前往登录"
+          })
+          .then(() => {
+            this.$router.push("/login");
+          })
+          .catch(() => {});
       }
     },
 
@@ -299,6 +340,10 @@ export default {
     onChange(index) {
       this.index = index;
     },
+    // 图片翻页
+    onChanges(index) {
+      this.index = index;
+    },
 
     // 进入购物车
     jumpto() {
@@ -316,18 +361,36 @@ export default {
             console.log(err);
           });
       } else {
-        this.$toast.fail("您好，请先登录");
+        this.$dialog
+          .confirm({
+            message: "未检测到登录记录，前往登录"
+          })
+          .then(() => {
+            this.$router.push("/login");
+          })
+          .catch(() => {});
       }
     },
     // 立即购买
     onBuyClicked(skuData) {
-      let obj = {
-        count: skuData.selectedNum,
-        list: this.goodsinfo
-      };
-      this.$store.state.payone = obj;
-      this.$store.state.buyway = 1;
-      this.$router.push({ name: "payMent" });
+      if (localStorage.getItem("nickname")) {
+        let obj = {
+          count: skuData.selectedNum,
+          list: this.goodsinfo
+        };
+        this.$store.state.payone = obj;
+        this.$store.state.buyway = 1;
+        this.$router.push({ name: "payMent" });
+      } else {
+        this.$dialog
+          .confirm({
+            message: "未检测到登录记录，前往登录"
+          })
+          .then(() => {
+            this.$router.push("/login");
+          })
+          .catch(() => {});
+      }
     }
   },
   mounted() {
@@ -385,5 +448,30 @@ export default {
   background: rgb(253, 253, 253);
   font-size: 14px;
   color: rgb(73, 151, 151);
+}
+// 评论用户头像
+.user-img {
+  width: 55px;
+  height: 55px;
+  padding-right: 5px;
+}
+// 用户评论盒子
+.comments-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.comment-content {
+  padding: 5px 10px;
+  border-bottom: 5px solid rgb(255, 255, 255);
+}
+// 评论时间
+.comments-time {
+  font-size: 14px;
+  color: #123;
+}
+.comments-user {
+  display: flex;
+  width: 200px;
 }
 </style>

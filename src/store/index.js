@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        // 用户城市
+        usercity: '',
+        // 分类列表
         category: [],
         amountgoods: '',
+        // 待评价数量
         tobeEvaluats: '',
         // 浏览历史
         browsing: [],
@@ -14,7 +18,9 @@ export default new Vuex.Store({
         addresslist: {},
         // 购物车购买
         paylists: {},
+        // 直接购买
         payone: {},
+        // 购买方式 1:立即购买 2:购物车购买
         buyway: 1,
     },
     mutations: {},

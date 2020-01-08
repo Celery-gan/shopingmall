@@ -2,7 +2,7 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <div>评价中心</div>
+        <van-nav-bar title="评价中心"></van-nav-bar>
     </mytop>
     <div>
       <!-- 商品内容 -->
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       rategoods: {},
-      rate: 0,
+      rate: 5,
       content: "",
       fileList: [],
       anonymous: false

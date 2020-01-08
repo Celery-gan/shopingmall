@@ -5800,3 +5800,213 @@ hostname: USER-20191119MA
 pid: 7212
 hostname: USER-20191119MA
 
+2020-01-08 13:47:36,025 ERROR 8312 [-/127.0.0.1/-/15ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430601f855f1c2cd52345') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430601f855f1c2cd52345') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 13:51:12,250 ERROR 8312 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:01:45,421 ERROR 8312 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:01:53,744 ERROR 8312 [-/127.0.0.1/-/9ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:16,037 ERROR 8312 [-/127.0.0.1/-/5ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:47,255 ERROR 8312 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:48,029 ERROR 8312 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:48,852 ERROR 8312 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:49,813 ERROR 8312 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:50,713 ERROR 8312 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:50,978 ERROR 8312 [-/127.0.0.1/-/8ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:51,067 ERROR 8312 [-/127.0.0.1/-/4ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:51,297 ERROR 8312 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:51,455 ERROR 8312 [-/127.0.0.1/-/3ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+
+2020-01-08 14:02:51,634 ERROR 8312 [-/127.0.0.1/-/2ms POST /v1/address] nodejs.MongoError: E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }
+    at Function.create (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\error.js:44:12)
+    at toError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\utils.js:150:22)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\operations\common_functions.js:265:39
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:420:18
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 11000
+errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_ dup key: { : ObjectId('5e1430891f855f1c2cd52346') }"
+pid: 8312
+hostname: USER-20191119MA
+

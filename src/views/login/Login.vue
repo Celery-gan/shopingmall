@@ -38,7 +38,7 @@
             placeholder="请输入验证码"
             class="code1"
           />
-          <div v-html="code" class="code2"></div>
+          <div v-html="code" class="code2" @click="getAverifys"></div>
         </div>
         <div class="login-btns">
           <van-button @click="logins" class="login-btn" type="primary">登录</van-button>
@@ -70,6 +70,7 @@ export default {
   },
   components: {},
   methods: {
+    // 获取随机验证码
     getAverifys() {
       this.$api
         .getAverify()
@@ -80,13 +81,14 @@ export default {
           console.log(err);
         });
     },
+    // 登录
     logins() {
       this.$api
         .login(this.nickname, this.password, this.verify)
         .then(res => {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
-            history.back();
+            this.$router.push("/");
           } else {
             this.$toast(res.msg);
           }
@@ -95,13 +97,14 @@ export default {
           console.log(err);
         });
     },
+    // 注册
     regists() {
       this.$api
         .register(this.nickname, this.password, this.verify)
         .then(res => {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
-            history.back();
+            this.$router.push("/");
           } else {
             this.$toast(res.msg);
           }
