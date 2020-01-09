@@ -45,13 +45,15 @@ import floors from "../components/home/Floors.vue";
 import homeheader from "../components/home/HomeHeader";
 //进入搜索时的页面内容
 import homesearch from "../components/home/HomSearch";
-
+import refeshs from "./../components/pullrefush/Refeshs";
+import { longStackSupport } from "q";
 export default {
   components: {
     viewpager,
     floors,
     homeheader,
-    homesearch
+    homesearch,
+    refeshs
   },
   data() {
     return {
@@ -76,8 +78,11 @@ export default {
       // 3f
       flinfo3: [],
       // 热门商品
-      hotgood: []
-      // 输入框内容
+      hotgood: [],
+      // 购物车数据
+      goodsinfo: [],
+      // 购物车数量
+      cartlen: 0
     };
   },
   methods: {
@@ -91,7 +96,8 @@ export default {
           this.images = res.data.slides;
           // 分类样式
           this.categorys = res.data.category;
-          this.$store.state.category = res.data.category; // 广告图
+          this.$store.state.category = this.categorys;
+          // 广告图
           this.advertes = res.data.advertesPicture.PICTURE_ADDRESS;
           // 商品推荐
           this.recommends = res.data.recommend;
@@ -112,10 +118,30 @@ export default {
     },
     send(nu1) {
       this.nu1 = nu1;
+    },
+    // 获取购物车数据
+    getCards() {
+      this.$api
+        .getCard({})
+        .then(res => {
+          this.cartlen = res.shopList.length;
+          localStorage.setItem("cartlen", res.shopList.length);
+          this.goodsinfo = res.shopList;
+          if (this.goodsinfo !== undefined) {
+            this.goodsinfo.map(item => {
+              item.mallPrice = item.mallPrice.toFixed(2);
+            });
+          }
+          this.$store.state.goodsinfo = this.goodsinfo;
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   mounted() {
     this.getrecommend();
+    this.getCards();
   },
   watch: {},
 

@@ -1,70 +1,76 @@
 <template>
   <div class="mall-bg">
     <mytop>会员中心</mytop>
-    <refeshs>
-      <div v-if="nickname" class="mine-header">
-        <div class="mine-setting">
-          <van-icon name="setting-o" color="#fff" @click="mineinfo" />
-        </div>
-        <div class="mine-picture">
-          <van-image round src="https://img.yzcdn.cn/vant/cat.jpeg" class="mine-imgs" />
-        </div>
-        <div class="mine-welcome">欢迎您:{{nickname}}</div>
-        <div class="mine-logout" @click="loginout">退出登录</div>
-      </div>
-      <div v-else class="mine-header">
-        <div class="mine-picture">
-          <van-image round class="mine-imgs" />
-        </div>
-        <div class="mine-welcome">欢迎!!</div>
-        <div class="mine-logout" @click="gotologin">登录/注册</div>
-      </div>
 
-      <div class="mine-status">
-        <div class="mine-condition" @click="gotoorder('b')">
-          <van-icon name="cash-back-record" size="40" />
-          <div>待支付</div>
-        </div>
-        <div class="mine-condition" @click="gotoorder('c')">
-          <van-icon name="logistics" size="40" />
-          <div>待发货</div>
-        </div>
-        <div class="mine-condition" @click="gotoorder('d')">
-          <van-icon name="points" size="40" />
-          <div>待收货</div>
-        </div>
-        <div class="mine-condition" @click="gotorate">
-          <van-icon name="certificate" size="40" :info="tobeEvaluats" />
-          <div>待评价</div>
-        </div>
-        <div class="mine-condition" @click="gotoorder('e')">
-          <van-icon name="like-o" size="40" />
-          <div>已完成</div>
-        </div>
+    <div v-if="nickname" class="mine-header">
+      <div class="mine-setting">
+        <van-icon name="setting-o" color="#fff" @click="mineinfo" />
       </div>
-      <div class="mine-cell">
-        <van-cell title="全部订单" icon="description" is-link to="order" />
+      <div class="mine-picture">
+        <van-image round src="https://img.yzcdn.cn/vant/cat.jpeg" class="mine-imgs" />
       </div>
-      <div class="mine-cell">
-        <div class="mine-none"></div>
+      <div class="mine-welcome">欢迎您:{{nickname}}</div>
+      <div class="mine-logout" @click="loginout">退出登录</div>
+    </div>
+    <div v-else class="mine-header">
+      <div class="mine-picture">
+        <van-image round class="mine-imgs" />
       </div>
-      <div class="mine-cell">
-        <van-cell title="收藏管理" icon="star-o" is-link to="collect" />
+      <div class="mine-welcome">欢迎!!</div>
+      <div class="mine-logout" @click="gotologin">登录/注册</div>
+    </div>
+
+    <div class="mine-status">
+      <div class="mine-condition" @click="gotoorder('b')">
+        <van-icon name="cash-back-record" size="40" />
+        <div>待支付</div>
       </div>
-      <div class="mine-cell">
-        <van-cell title="地址管理" icon="location-o" is-link to="address" />
+      <div class="mine-condition" @click="gotoorder('c')">
+        <van-icon name="logistics" size="40" />
+        <div>待发货</div>
       </div>
-      <div class="mine-cell">
-        <van-cell title="最近浏览" icon="browsing-history-o" is-link to="browes" />
+      <div class="mine-condition" @click="gotoorder('d')">
+        <van-icon name="points" size="40" />
+        <div>待收货</div>
       </div>
-    </refeshs>
+      <div v-if="tobeEvallen !== 0" class="mine-condition" @click="gotorate">
+        <van-icon name="certificate" size="40" :info="tobeEvallen" />
+        <div>待评价</div>
+      </div>
+      <div v-else class="mine-condition" @click="gotorate">
+        <van-icon name="certificate" size="40" />
+        <div>待评价</div>
+      </div>
+      <div class="mine-condition" @click="gotoorder('e')">
+        <van-icon name="like-o" size="40" />
+        <div>已完成</div>
+      </div>
+    </div>
+    <div class="mine-cell">
+      <van-cell title="全部订单" icon="description" is-link to="order" />
+    </div>
+    <div class="mine-cell">
+      <div class="mine-none"></div>
+    </div>
+    <div class="mine-cell">
+      <van-cell title="收藏管理" icon="star-o" is-link to="collect" />
+    </div>
+    <div class="mine-cell">
+      <van-cell title="地址管理" icon="location-o" is-link to="address" />
+    </div>
+    <div class="mine-cell">
+      <van-cell title="最近浏览" icon="browsing-history-o" is-link to="browes" />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return { nickname: "" };
+    return {
+      nickname: "",
+      tobeEvallen: 0
+    };
   },
   components: {},
   methods: {
@@ -89,30 +95,45 @@ export default {
     },
     // 前往订单
     gotoorder(val) {
-      if (this.nickname !== "") {
-        this.$router.push({ name: "order", query: { activeName: val } });
-      } else {
-        this.$toast.fail("您还未登录，请先登录");
-      }
+      this.$router.push({ name: "order", query: { activeName: val } });
     },
     // 前往评价
     gotorate(val) {
-      if (this.nickname !== "") {
-        this.$router.push("/evaluate");
-      } else {
-        this.$toast.fail("您还未登录，请先登录");
-      }
+      this.$router.push("/evaluate");
+    },
+    // 待评价
+    tobeEvaluated() {
+      this.$api
+        .tobeEvaluated()
+        .then(res => {
+          console.log(res);
+          this.tobeEvallen = res.data.count;
+          this.$store.state.tobeEvaluat = res.data.list;
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   },
   mounted() {
     if (localStorage.getItem("nickname")) {
       this.nickname = localStorage.getItem("nickname");
     }
+    this.tobeEvaluated();
   },
   watch: {},
-  computed: {
-    tobeEvaluats() {
-      return this.$store.state.tobeEvaluats;
+  computed: {},
+  beforeRouteLeave(to, from, next) {
+    if (
+      to.path === "/" ||
+      to.path === "/login" ||
+      to.path === "/category" ||
+      to.path === "/shopingcars" ||
+      this.nickname.trim() !== ""
+    ) {
+      next();
+    } else {
+      this.$toast.fail("您还未登录，请先登录");
     }
   }
 };

@@ -4,46 +4,50 @@
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
       <div>最近浏览</div>
     </mytop>
-
-    <div v-if="nickname !== ''">
-      <div v-if="browsing.length < 1">
-        <div class="address-none">暂无浏览历史~~</div>
-      </div>
-      <div v-else>
-        <!-- 循环显示商品信息 -->
-        <van-cell v-for="(item,index) in browsing" :key="item.id">
-          <div class="mysearch-list">
-            <div @click="gotos(item.id)">
-              <img :src="item.image_path" class="search-img" />
-            </div>
-            <div>
-              <div v-html="item.name" class="goods-name" @click="gotos(item.id)"></div>
-              <div class="goods-price">
-                <div class="persent-price" @click="gotos(item.id)">￥{{item.present_price}}</div>
-                <div @click="delbros(index)">
-                  <img src="../../assets/cuo.png" class="collect-delbtn" />
+    <browsres>
+      <div v-if="nickname !== ''">
+        <div v-if="browsing.length < 1">
+          <div class="address-none">暂无浏览历史~~</div>
+        </div>
+        <div v-else>
+          <!-- 循环显示商品信息 -->
+          <van-cell v-for="(item,index) in browsing" :key="item.id">
+            <div class="mysearch-list">
+              <div @click="gotos(item.id)">
+                <img :src="item.image_path" class="search-img" />
+              </div>
+              <div>
+                <div v-html="item.name" class="goods-name" @click="gotos(item.id)"></div>
+                <div class="goods-price">
+                  <div class="persent-price" @click="gotos(item.id)">￥{{item.present_price}}</div>
+                  <div @click="delbros(index)">
+                    <img src="../../assets/cuo.png" class="collect-delbtn" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </van-cell>
+          </van-cell>
+        </div>
       </div>
-    </div>
+    </browsres>
   </div>
 </template>
 
 <script>
+import browsres from "../../components/pullrefush/Pullrefush";
 export default {
   data() {
     return {
       nickname: ""
     };
   },
-  components: {},
+  components: {
+    browsres
+  },
   methods: {
     // 返回上一个页面
     bcakbefore() {
-     this.$router.push('/mine')
+      this.$router.push("/mine");
     },
     // 点击搜索出来的商品 前往商品详情页
     gotos(val) {
@@ -55,7 +59,14 @@ export default {
       });
     },
     delbros(index) {
-      this.$store.state.browsing.splice(index, 1);
+      this.$dialog
+        .confirm({
+          title: "确认删除该条浏览历史"
+        })
+        .then(() => {
+          this.$store.state.browsing.splice(index, 1);
+        })
+        .catch(() => {});
     }
   },
   mounted() {

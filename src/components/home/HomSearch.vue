@@ -5,6 +5,7 @@
       <!-- 搜索框通过watch来判断是否有商品 取消按钮使页面恢复到正常首页 -->
       <van-search v-model="inputs" placeholder="请输入搜索关键词" show-action @cancel="onCancel" />
     </form>
+
     <!-- 如果输入框为空 显示搜索历史-->
     <div v-if="inputs === ''">
       <div>
@@ -84,12 +85,19 @@ export default {
           .catch(err => {
             console.log(err);
           });
-      }, 1000);
+      }, 300);
     },
     // 删除搜索历史
     delHistory() {
-      this.SearchHistory = [];
-      localStorage.removeItem("SearchHistory");
+      this.$dialog
+        .confirm({
+          title: "确认删除搜索历史吗？"
+        })
+        .then(() => {
+          this.SearchHistory = [];
+          localStorage.removeItem("SearchHistory");
+        })
+        .catch(() => {});
     },
     // 点击搜索历史的词语进行重新搜索
     searchAgain(val) {
@@ -117,7 +125,6 @@ export default {
       let str = localStorage.getItem("SearchHistory");
       // 将搜索历史对应的词语赋值给当前搜索历史显示出来
       this.SearchHistory = str.split(",");
-      // console.log(this.SearchHistory);
     }
   },
   watch: {

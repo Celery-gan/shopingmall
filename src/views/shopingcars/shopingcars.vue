@@ -3,25 +3,26 @@
     <mytop>
       <van-nav-bar title="购物车"></van-nav-bar>
     </mytop>
-    <refeshs>
-      <!-- 如果未登录 页面内容提示前往登录 -->
-      <div v-if="nickname === ''">
-        <div class="shopcarts"></div>
-        <div class="msg">亲，你还没有登录哟~~</div>
-        <div class="shopcarts-login" @click="tologin">
-          <van-button round type="default">去登录</van-button>
-        </div>
+
+    <!-- 如果未登录 页面内容提示前往登录 -->
+    <div v-if="nickname === ''">
+      <div class="shopcarts"></div>
+      <div class="msg">亲，你还没有登录哟~~</div>
+      <div class="shopcarts-login" @click="tologin">
+        <van-button round type="default">去登录</van-button>
       </div>
-      <!-- 如果已登录 但是 购物车没有商品 -->
-      <div v-else-if="goodsinfo.length === 0">
-        <div class="shopcarts"></div>
-        <div class="msg">你的购物车空空的~~~~</div>
-        <div class="shopcarts-login" @click="gotos">
-          <van-button round type="default">去购物</van-button>
-        </div>
+    </div>
+    <!-- 如果已登录 但是 购物车没有商品 -->
+    <div v-else-if="goodsinfo.length === 0">
+      <div class="shopcarts"></div>
+      <div class="msg">你的购物车空空的~~~~</div>
+      <div class="shopcarts-login" @click="gotos">
+        <van-button round type="default">去购物</van-button>
       </div>
-      <!-- 如果已登录 且 购物车有商品 -->
-      <div v-else>
+    </div>
+    <!-- 如果已登录 且 购物车有商品 -->
+    <div v-else>
+      <shopres>
         <div class="cart-header">
           <!-- 全选按钮 -->
           <div class="check">
@@ -47,7 +48,7 @@
           <div v-for="(item,index) in goodsinfo" :key="item.id">
             <div class="cartitem-box">
               <!-- 复选框 -->
-              <van-checkbox :name="index" v-model="item.check" @click="checkitem(index)"></van-checkbox>
+              <van-checkbox :name="index" v-model="item.check" @click="checkitem(item)"></van-checkbox>
               <!-- 商品内容 -->
               <van-card
                 :price="item.mallPrice"
@@ -60,7 +61,7 @@
                   <van-stepper
                     v-model="item.count"
                     min="1"
-                    max="10"
+                    max="20"
                     integer
                     @change="editCart(item)"
                   />
@@ -69,23 +70,26 @@
             </div>
           </div>
         </van-checkbox-group>
-      </div>
-    </refeshs>
+      </shopres>
+    </div>
   </div>
 </template>
 
 <script>
+import shopres from "../../components/pullrefush/shopcarRes";
 export default {
   data() {
     return {
       nickname: "",
-      goodsinfo: [],
+      // goodsinfo: [],
       result: [],
       checked: false,
       arr: []
     };
   },
-  components: {},
+  components: {
+    shopres
+  },
   methods: {
     gotos() {
       this.$router.push("/");
@@ -102,52 +106,60 @@ export default {
     tologin() {
       this.$router.push("/login");
     },
-    // 获取购物车数据
-    getCards() {
-      this.$api
-        .getCard({})
-        .then(res => {
-          this.goodsinfo = res.shopList;
-          let sum = 0;
-          this.goodsinfo.map(item => {
-            sum += item.count;
-            item.mallPrice = item.mallPrice.toFixed(2);
-          });
-          this.$store.state.amountgoods = sum;
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    },
+    // // 获取购物车数据
+    // getCards() {
+    //   this.$api
+    //     .getCard({})
+    //     .then(res => {
+    //       this.goodsinfo = res.shopList;
+    //       // let sum = 0;
+    //       if (this.goodsinfo !== undefined) {
+    //         this.goodsinfo.map(item => {
+    //           // sum += item.count;
+    //           item.mallPrice = item.mallPrice.toFixed(2);
+    //         });
+    //       }
+    //       // this.$store.state.amountgoods = sum;
+    //     })
+    //     .catch(err => {
+    //       console.log(err);
+    //     });
+    // },
     // 选择某个商品
-    checkitem(index) {
-      this.goodsinfo[index].check = !this.goodsinfo[index].check;
+    checkitem(val) {
+      val.check = !val.check;
       this.checked = this.goodsinfo.every(item => {
         return item.check;
       });
     },
     // 删除
     delcart() {
-      let delarr = [];
-      this.arr.map(item => {
-        delarr.push(item.cid);
-      });
-      this.$api
-        .deleteShop(delarr)
-        .then(res => {
-          this.getCards();
-          this.$toast.success(res.msg);
+      this.$dialog
+        .confirm({
+          title: "确认从购物车删除选中的商品吗？"
         })
-        .catch(err => {
-          console.log(err);
-        });
+        .then(() => {
+          let delarr = [];
+          this.arr.map(item => {
+            delarr.push(item.cid);
+          });
+          this.$api
+            .deleteShop(delarr)
+            .then(res => {
+              // this.getCards();
+              this.$toast.success(res.msg);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        })
+        .catch(() => {});
     },
     gotopay() {
       let idlist = [];
       let count = this.arr[0].count;
       this.arr.map(item => {
         idlist.push(item.cid);
-        // count += item.count;
       });
       let obj = {
         orderId: idlist,
@@ -163,9 +175,7 @@ export default {
     editCart(val) {
       this.$api
         .editCart(val.count, val.cid, val.mallPrice)
-        .then(res => {
-          // console.log(res);
-        })
+        .then(res => {})
         .catch(err => {
           console.log(err);
         });
@@ -175,7 +185,7 @@ export default {
     if (localStorage.getItem("nickname")) {
       this.nickname = localStorage.getItem("nickname");
     }
-    this.getCards();
+    // this.getCards();
   },
   watch: {},
 
@@ -193,6 +203,19 @@ export default {
         });
       }
       return sum.toFixed(2);
+    },
+    // amountgoods() {
+    //   let sum = 0;
+    //   if (this.goodsinfo !== undefined) {
+    //     this.goodsinfo.map(item => {
+    //       sum += item.count;
+    //     });
+    //   }
+    //   this.$store.state.amountgoods = sum;
+    //   console.log(sum);
+    // }
+    goodsinfo() {
+      return this.$store.state.goodsinfo;
     }
   }
 };

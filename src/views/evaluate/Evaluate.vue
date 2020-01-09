@@ -13,13 +13,13 @@
             <van-tab title="已评价" name="b"></van-tab>
           </van-tabs>
         </van-cell>
-        <refeshs>
+        <rateres class="bg">
           <!-- 待评价页面 -->
           <div v-if="activeName === 'a'">
             <div v-if="tobeEvaluat.length===0" class="coming-soon">暂无待评价数据~~~</div>
             <div v-else>
               <div v-for="item in tobeEvaluat" :key="item.id">
-                <van-card :title="item.name" :thumb="item.image_path">
+                <van-card :title="item.name" :thumb="item.image_path" class="item-split">
                   <div slot="footer" class="cartitem-footer">
                     <van-button type="primary" plain round size="mini" @click="gotorate(item)">
                       <van-icon name="chat-o" />评价晒单
@@ -34,9 +34,12 @@
             <div v-if="alreadyEvaluat.length===0" class="coming-soon">暂无已评价数据~~~</div>
             <div v-else>
               <div v-for="item in alreadyEvaluat" :key="item.id">
-                <!-- <van-card :title="item.name" :thumb="item.image_path" /> -->
-                <van-card :title="item.goods[0].name" :thumb="item.goods[0].image_path">
-                  <div slot="footer" class="cartitem-footer">
+                <van-card
+                  :title="item.goods[0].name"
+                  :thumb="item.goods[0].image_path"
+                  class="item-split"
+                >
+                  <div slot="footer">
                     <van-button type="danger" plain round size="mini" @click="gotosee(item)">
                       <van-icon name="chat-o" />查看评价
                     </van-button>
@@ -45,25 +48,24 @@
               </div>
             </div>
           </div>
-          <!--  -->
-        </refeshs>
+        </rateres>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import evalrefs from "../../components/evaluate/Evaluateref";
+import rateres from "../../components/pullrefush/Rateres";
 export default {
   data() {
     return {
       activeName: "a",
-      alreadyEvaluat: [],
-      tobeEvaluat: []
+      alreadyEvaluat: []
+      // tobeEvaluat: []
     };
   },
   components: {
-    evalrefs
+    rateres
   },
   methods: {
     // 返回上一个页面
@@ -71,18 +73,18 @@ export default {
       this.$router.push("/mine");
     },
 
-    // 待评价
-    tobeEvaluated() {
-      this.$api
-        .tobeEvaluated()
-        .then(res => {
-          this.tobeEvaluat = res.data.list;
-          this.$store.state.tobeEvaluats = this.tobeEvaluat.length;
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    },
+    // // 待评价
+    // tobeEvaluated() {
+    //   this.$api
+    //     .tobeEvaluated()
+    //     .then(res => {
+    //       this.tobeEvaluat = res.data.list;
+    //       this.$store.state.tobeEvaluats = this.tobeEvaluat.length;
+    //     })
+    //     .catch(err => {
+    //       console.log(err);
+    //     });
+    // },
     // 已评价
     alreadyEvaluated() {
       this.$api
@@ -98,15 +100,19 @@ export default {
       this.$router.push({ name: "rate", query: { rategoods: val } });
     },
     gotosee(val) {
-      this.$router.push({ name: "seeeval", query: { myrate: val } });
+      this.$router.push({ name: "seeeval", query: { ratesid: val._id } });
     }
   },
   mounted() {
     this.alreadyEvaluated();
-    this.tobeEvaluated();
+    // this.tobeEvaluated();
   },
   watch: {},
-  computed: {}
+  computed: {
+    tobeEvaluat() {
+      return this.$store.state.tobeEvaluat;
+    }
+  }
 };
 </script>
 
@@ -121,7 +127,7 @@ export default {
 .evaluate-bg {
   background: url("../../assets/evaluate.jpg") no-repeat;
   background-size: 100%;
-  height: 570px;
+  height: 620px;
   overflow: hidden;
 }
 .Evaluate-options {
@@ -138,5 +144,8 @@ export default {
   margin: 10px auto;
   text-align: center;
   color: grey;
+}
+.item-split {
+  border-bottom: 5px solid #fff;
 }
 </style>

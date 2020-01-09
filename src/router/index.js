@@ -141,6 +141,13 @@ const routes = [
         component: () =>
             import ('../views/userdetail/Userdetail'),
     },
+    // 我的详情 userdetail
+    {
+        path: '/test',
+        name: 'test',
+        component: () =>
+            import ('../views/test/Test'),
+    },
 ]
 const router = new VueRouter({
     mode: 'history',

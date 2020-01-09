@@ -4,7 +4,7 @@
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
       <div>订单结算</div>
     </mytop>
-    <refeshs>
+    <payres>
       <!-- 收货信息  -->
       <!-- 如果有地址 显示地址 -->
       <div v-if="addlist.id !== undefined">
@@ -43,13 +43,14 @@
         </div>
         <!--  -->
       </div>
-    </refeshs>
+    </payres>
     <!-- 提交订单 -->
     <van-submit-bar :price="piceses" button-text="提交订单" @submit="placeOrder" />
   </div>
 </template>
 
 <script>
+import payres from "../../components/pullrefush/payRes";
 export default {
   data() {
     return {
@@ -64,7 +65,9 @@ export default {
       goodsone: {}
     };
   },
-  components: {},
+  components: {
+    payres
+  },
   methods: {
     // 返回上页
     bcakbefore() {
@@ -111,7 +114,7 @@ export default {
         else if (this.buyway === 1) {
           let ids = [];
           ids.push(this.goodsone.id);
-          console.log(ids);
+          // console.log(ids);
           obj = {
             tel: this.addlist.tel,
             address: this.addlist.address,

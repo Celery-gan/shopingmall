@@ -7,19 +7,19 @@
     <div>
       <div class="myrate-header">
         <div>
-          <img src="../../assets/evaluate.jpg" class="user-img" />
+          <img :src="userpic" class="user-img" />
           <van-rate v-model="myrates.rate" readonly />
         </div>
-        <div>{{myrates.comment_time}}</div>
+        <div class="comment_time">{{myrates.comment_time}}</div>
       </div>
       <div class="myrate-header">评价内容：{{myrates.content}}</div>
       <div class="myrate-body">
-        <div>
-          <img :src="arr.image_path" class="myrate-img" />
+        <div @click="gotos(goods.id)">
+          <img :src="goods.image_path" class="myrate-img" />
         </div>
         <div class="myrate-font">
-          {{arr.name}}
-          <van-icon name="shopping-cart-o" color="red" @click="onAddCartClicked" />
+          {{goods.name}}
+          <van-icon name="cart-circle-o" color="red" @click="onAddCartClicked" size="30px" />
         </div>
       </div>
     </div>
@@ -30,8 +30,10 @@
 export default {
   data() {
     return {
+      ratesid: "",
       myrates: {},
-      arr: {}
+      userpic: "",
+      goods: {}
     };
   },
   components: {},
@@ -40,14 +42,25 @@ export default {
     bcakbefore() {
       history.back();
     },
+    evaluateOne() {
+      this.$api
+        .evaluateOne(this.ratesid)
+        .then(res => {
+          this.myrates = res.evaluateOne;
+          this.userpic = this.myrates.user[0].avatar;
+          this.goods = this.myrates.goods[0];
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
     // 加入购物车
     onAddCartClicked() {
       if (localStorage.getItem("nickname")) {
         this.$api
-          .addShop(this.arr.id)
+          .addShop(this.myrates.goods[0].id)
           .then(res => {
             this.$toast.success(res.msg);
-            this.getCards();
           })
           .catch(err => {
             console.log(err);
@@ -55,14 +68,22 @@ export default {
       } else {
         this.$toast.fail("您好，请先登录");
       }
+    },
+    // 点击搜索出来的商品 前往商品详情页
+    gotos(val) {
+      this.$router.push({
+        name: "detail",
+        query: {
+          ids: val
+        }
+      });
     }
   },
   mounted() {
-    if (this.$route.query.myrate) {
-      this.myrates = this.$route.query.myrate;
-      this.arr = this.myrates.goods[0];
-      // console.log(this.myrates);
+    if (this.$route.query.ratesid) {
+      this.ratesid = this.$route.query.ratesid;
     }
+    this.evaluateOne();
   },
   watch: {},
   computed: {}
@@ -95,7 +116,13 @@ export default {
   width: 100px;
 }
 .myrate-font {
-  width: 220px;
+  width: 240px;
   margin: auto 10px;
+}
+.comment_time {
+  font-size: 14px;
+  color: gray;
+  padding: 0 15px;
+  margin-top: 10px;
 }
 </style>

@@ -1,15 +1,16 @@
 <template>
   <div>
-    <mytop>
-      <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-      <van-nav-bar title="地址列表"></van-nav-bar>
-    </mytop>
+    <van-sticky>
+      <mytop>
+        <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
+        <van-nav-bar title="地址列表"></van-nav-bar>
+      </mytop>
+    </van-sticky>
     <div v-if="nickname !== ''">
       <div v-if="addresslist.length < 1">
         <div class="address-none">暂无收货数据~~</div>
         <van-address-list @add="onAdd" />
       </div>
-
       <div v-else>
         <van-address-list
           v-model="chosenAddressId"

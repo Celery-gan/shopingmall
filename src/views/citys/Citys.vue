@@ -12,10 +12,11 @@
     </van-sticky>
     <!-- 搜索框 -->
     <van-search placeholder="请输入城市关键词" v-model="searchval" />
+    <!-- 如果没有搜索关键词 -->
     <div v-if="searchval.trim()===''">
       <!-- 当前城市 -->
       <div class="city-listword">当前城市</div>
-      <van-cell>
+      <van-cell @click="gotohome(citys)">
         <div class="city-nowposiyion">{{citys}}</div>
       </van-cell>
       <!-- 热门城市 -->
@@ -31,7 +32,6 @@
         </div>
       </van-cell>
       <!-- 排序 -->
-
       <van-index-bar :index-list="cityNames">
         <div v-for="(item,index1) in citylists" :key="item.id">
           <van-index-anchor :index="index1">{{index1}}</van-index-anchor>

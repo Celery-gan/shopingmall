@@ -6010,3 +6010,87 @@ errmsg: "E11000 duplicate key error collection: shoppingMall.address index: _id_
 pid: 8312
 hostname: USER-20191119MA
 
+2020-01-09 14:19:44,270 ERROR 5636 [-/127.0.0.1/-/16ms POST /v1/goodsOne/comment] nodejs.TypeError: _base64.includes is not a function
+    at ToolsService.getUploadFile (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\service\tools.js:28:21)
+    at OperatingGoodsController.comment (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:249:52)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+
+pid: 5636
+hostname: USER-20191119MA
+
+2020-01-09 14:19:45,845 ERROR 5636 [-/127.0.0.1/-/5ms POST /v1/goodsOne/comment] nodejs.TypeError: _base64.includes is not a function
+    at ToolsService.getUploadFile (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\service\tools.js:28:21)
+    at OperatingGoodsController.comment (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:249:52)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:56
+
+pid: 5636
+hostname: USER-20191119MA
+
+2020-01-09 15:41:02,145 ERROR 5636 [-/127.0.0.1/-/3ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\user.js:453:52)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 5636
+hostname: USER-20191119MA
+
+2020-01-09 15:47:10,177 ERROR 5636 [-/127.0.0.1/-/1ms POST /v1/evaluateOne] nodejs.Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+    at new ObjectID (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:59:11)
+    at ObjectID [as ObjectId] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_bson@1.1.3@bson\lib\bson\objectid.js:40:43)
+    at UserController.evaluateOne (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\user.js:453:52)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-core@4.17.4@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:195:33)
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:19
+    at dispatch (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+
+pid: 5636
+hostname: USER-20191119MA
+

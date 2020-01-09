@@ -4,35 +4,37 @@
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
       <van-nav-bar title="我的收藏"></van-nav-bar>
     </mytop>
-
-    <div v-if="nickname !== ''">
-      <!-- 循环显示商品信息 -->
-      <div v-if="Collections.length < 1">
-        <div class="address-none">暂无收藏商品~~</div>
-      </div>
-      <div v-else>
-        <van-cell v-for="item in Collections" :key="item.id">
-          <div class="mysearch-list">
-            <div @click="gotos(item.cid)">
-              <img :src="item.image_path" class="search-img" />
-            </div>
-            <div>
-              <div v-html="item.name" class="goods-name" @click="gotos(item.cid)"></div>
-              <div class="goods-price">
-                <div class="persent-price" @click="gotos(item.cid)">￥{{item.present_price}}</div>
-                <div @click="delcollect(item)">
-                  <img src="../../assets/cuo.png" class="collect-delbtn" />
+    <colres>
+      <div v-if="nickname !== ''">
+        <!-- 循环显示商品信息 -->
+        <div v-if="Collections.length < 1">
+          <div class="address-none">暂无收藏商品~~</div>
+        </div>
+        <div v-else>
+          <van-cell v-for="item in Collections" :key="item.id">
+            <div class="mysearch-list">
+              <div @click="gotos(item.cid)">
+                <img :src="item.image_path" class="search-img" />
+              </div>
+              <div>
+                <div v-html="item.name" class="goods-name" @click="gotos(item.cid)"></div>
+                <div class="goods-price">
+                  <div class="persent-price" @click="gotos(item.cid)">￥{{item.present_price}}</div>
+                  <div @click="delcollect(item)">
+                    <img src="../../assets/cuo.png" class="collect-delbtn" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </van-cell>
+          </van-cell>
+        </div>
       </div>
-    </div>
+    </colres>
   </div>
 </template>
 
 <script>
+import colres from "../../components/pullrefush/Pullrefush";
 export default {
   data() {
     return {
@@ -40,11 +42,13 @@ export default {
       nickname: ""
     };
   },
-  components: {},
+  components: {
+    colres
+  },
   methods: {
     // 返回上一个页面
     bcakbefore() {
-      this.$router.push('/mine')
+      this.$router.push("/mine");
     },
     tologin() {
       this.$router.push("/login");
@@ -63,16 +67,23 @@ export default {
     },
     // 取消收藏
     delcollect(val) {
-      //  cancelCollection 取消收藏单个商品        参数：  id:商品的cid
-      this.$api
-        .cancelCollection(val.cid)
-        .then(res => {
-          this.$toast.success(res.msg);
-          this.getCollection();
+      this.$dialog
+        .confirm({
+          title: "确认取消收藏"
         })
-        .catch(err => {
-          console.log(err);
-        });
+        .then(() => {
+          this.$api
+            .cancelCollection(val.cid)
+            .then(res => {
+              this.$toast.success(res.msg);
+              this.getCollection();
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        })
+        .catch(() => {});
+      //  cancelCollection 取消收藏单个商品        参数：  id:商品的cid
     },
     // 点击搜索出来的商品 前往商品详情页
     gotos(val) {

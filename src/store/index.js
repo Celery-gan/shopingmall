@@ -22,6 +22,8 @@ export default new Vuex.Store({
         payone: {},
         // 购买方式 1:立即购买 2:购物车购买
         buyway: 1,
+        // 购物车数据
+        goodsinfo: []
     },
     mutations: {},
     actions: {},

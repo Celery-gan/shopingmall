@@ -2,7 +2,7 @@
   <div>
     <mytop>
       <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
-        <van-nav-bar title="评价中心"></van-nav-bar>
+      <van-nav-bar title="评价中心"></van-nav-bar>
     </mytop>
     <div>
       <!-- 商品内容 -->
@@ -59,7 +59,14 @@ export default {
   methods: {
     // 返回上一个页面
     bcakbefore() {
-      history.back();
+      this.$dialog
+        .confirm({
+          title: "确认取消评价该商品吗？"
+        })
+        .then(() => {
+          history.back();
+        })
+        .catch(() => {});
     },
     comment() {
       //  comment  商品评论(id,rate,content, anonymous(是否匿名), _id, order_id, image=[])
@@ -74,9 +81,9 @@ export default {
           content: this.content
         })
         .then(res => {
-          console.log(res);
+          // console.log(res);
           this.$toast.success(res.msg);
-          this.$router.push('/evaluate')
+          this.$router.push("/evaluate");
         })
         .catch(err => {
           console.log(err);

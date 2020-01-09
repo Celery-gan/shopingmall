@@ -78,6 +78,7 @@ export default {
           AMap.event.addListener(geolocation, "error", onError);
 
           function onComplete(data) {
+            // console.log(data);
             // data是具体的定位信息
             _this.city = data.addressComponent.city;
             _this.$store.state.usercity = _this.city;

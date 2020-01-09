@@ -7,12 +7,14 @@
     </mytop>
     <div>
       <van-cell-group>
+        <!-- <van-uploader :max-count="2"></van-uploader> -->
         <van-cell value="内容" is-link class="user-avatarbox">
           <img :src="userinfo.avatar" class="user-avatar" />
           <template slot="title">
             <span class="custom-title">头像</span>
           </template>
         </van-cell>
+
         <!-- 用户名 不可更改 -->
         <van-field v-model="userinfo.username" disabled clearable label="用户名" />
         <!-- 昵称 -->
@@ -92,7 +94,14 @@ export default {
   methods: {
     // 返回上一个页面
     bcakbefore() {
-      history.back();
+      this.$dialog
+        .confirm({
+          title: "确认取消修改个人信息吗？"
+        })
+        .then(() => {
+          history.back();
+        })
+        .catch(() => {});
     },
     // 获取用户信息
     getuserinfo() {
@@ -100,7 +109,6 @@ export default {
         .user({})
         .then(res => {
           this.userinfo = res.userInfo;
-          // console.log(this.userinfo);
           // 将 年 月 日 拼接为 出生年月
           this.Birthday = `${this.userinfo.year}年${this.userinfo.month}月${this.userinfo.day}日`;
         })
@@ -151,6 +159,8 @@ export default {
         .then(res => {
           // 弹框提示成功
           this.$toast.success(res.msg);
+          // 本地存储姓名更改
+          localStorage.setItem("nickname", this.userinfo.nickname);
           // 回到个人页面
           history.back();
         })

@@ -1,115 +1,114 @@
 <template>
   <!-- 详情页 -->
-  <div class="mall-bg">
+  <div>
     <van-sticky>
       <!-- 头部 返回按钮 -->
       <mytop>
         <img src="../../assets/toback.svg" @click="bcakbefore" class="bcakHome" />
       </mytop>
     </van-sticky>
+    <!-- 1、轮播图 点击使show为true 显示预览 -->
+    <van-swipe :autoplay="3000" class="swipe-img" :stop-propagation="false">
+      <van-swipe-item v-for="(item,index) in images" :key="item.id">
+        <img :src="item" class="detail-imgs" @click="show = true" />
+        <div class="custom-indicator" slot="indicator">{{ index + 1 }}/4</div>
+      </van-swipe-item>
+    </van-swipe>
+    <!-- 1.1、 预览图片 默认隐藏 当show为true时显示 -->
+    <van-image-preview v-model="show" :images="images" @change="onChange">
+      <template v-slot:index>{{ index + 1 }}/{{images.length}}</template>
+    </van-image-preview>
 
-    <refeshs>
-      <!-- 1、轮播图 点击使show为true 显示预览 -->
-      <van-swipe :autoplay="3000" class="swipe-img" @change="onChanges" :stop-propagation="false">
-        <van-swipe-item v-for="(item,index) in images" :key="item.id">
-          <img :src="item" class="detail-imgs" @click="show = true" />
-          <div class="custom-indicator" slot="indicator">{{ index + 1 }}/4</div>
-        </van-swipe-item>
-      </van-swipe>
-      <!-- 1.1、 预览图片 默认隐藏 当show为true时显示 -->
-      <van-image-preview v-model="show" :images="images" @change="onChange">
-        <template v-slot:index>{{ index + 1 }}/{{images.length}}</template>
-      </van-image-preview>
-      <!--2、 商品名称title + 价格desc -->
-      <van-panel :title="goodsinfo.name" :desc="`￥${goodsinfo.present_price}`">
-        <!-- 2.1 运费 + 商品量amount + 收藏、取消收藏collectGoods -->
-        <div class="flexbtw goodsinfos">
-          <div>运费：0</div>
-          <div>剩余：{{goodsinfo.amount}}</div>
-          <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
-          <div v-if="nickname === ''" @click="collectGoods">
-            收藏
-            <van-icon name="like-o" color="red" />
-          </div>
-          <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
-          <div v-else-if="isCollect === 0" @click="collectGoods">
-            收藏
-            <van-icon name="like-o" color="red" />
-          </div>
-          <!-- 2.1.2 在登录状态下 并且已收藏 可以点击取消收藏 -->
-          <div v-else @click="cancelCollect">
-            取消收藏
-            <van-icon name="like" color="red" />
+    <!--2、 商品名称title + 价格desc -->
+    <van-panel :title="goodsinfo.name" :desc="`￥${goodsinfo.present_price}`">
+      <!-- 2.1 运费 + 商品量amount + 收藏、取消收藏collectGoods -->
+      <div class="flexbtw goodsinfos">
+        <div>运费：0</div>
+        <div>剩余：{{goodsinfo.amount}}</div>
+        <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
+        <div v-if="nickname === ''" @click="collectGoods">
+          收藏
+          <van-icon name="like-o" color="red" />
+        </div>
+        <!-- 2.1.1 如果没有登录 或者 检测到该商品没有被收藏  页面显示没有收藏的状态-->
+        <div v-else-if="isCollect === 0" @click="collectGoods">
+          收藏
+          <van-icon name="like-o" color="red" />
+        </div>
+        <!-- 2.1.2 在登录状态下 并且已收藏 可以点击取消收藏 -->
+        <div v-else @click="cancelCollect">
+          取消收藏
+          <van-icon name="like" color="red" />
+        </div>
+      </div>
+      <!-- 2.2 店铺名 + 进入店铺 -->
+      <van-cell value="进入店铺" is-link icon="shop-o">
+        <!-- 2.2.1使用 title 插槽来自定义标题 -->
+        <template slot="title">
+          <!-- 2.2.1.1 店铺名 -->
+          <span>有名的店</span>
+          <!-- 2.2.1.2 店铺标签 -->
+          <van-tag type="danger">官方</van-tag>
+        </template>
+      </van-cell>
+    </van-panel>
+    <!-- 3、 商品详情 + 商品评价 -->
+    <van-tabs>
+      <van-tab v-for="index1 in 2" :key="index1">
+        <!--  -->
+        <div slot="title">
+          <van-icon v-if="index1===1">商品详情</van-icon>
+          <van-icon v-else>商品评价</van-icon>
+        </div>
+        <div v-if="index1===1">
+          <!-- 3.1 商品详情 -->
+          <div v-html="goodsinfo.detail"></div>
+        </div>
+        <div v-else>
+          <!-- 3.2商品评价 -->
+          <div v-if="comments.length === 0" class="goodsinfo-comments">暂无数据</div>
+          <div v-else>
+            <!--  comments 所有的评论 -->
+            <div v-for="item in comments" :key="item.id">
+              <!-- 3.2.1 匿名评价 -->
+              <div v-if="item.anonymous">
+                <div class="comments-header">
+                  <div class="comments-user">
+                    <img :src="item.comment_avatar" class="user-img" />
+                    <div>
+                      <div>{{item.comment_nickname}}</div>
+                      <van-rate v-model="item.rate" readonly />
+                    </div>
+                  </div>
+                  <div class="comments-time">{{item.comment_time}}</div>
+                </div>
+                <div class="comment-content">评论：{{item.content}}</div>
+              </div>
+              <!-- 3.2.2 实名评价 -->
+              <div v-else>
+                <div class="comments-header">
+                  <div class="comments-user">
+                    <img :src="item.user[0].avatar" class="user-img" />
+                    <div>
+                      <div>用户：{{item.user[0].nickname}}</div>
+                      <van-rate v-model="item.rate" readonly />
+                    </div>
+                  </div>
+                  <div class="comments-time">{{item.comment_time}}</div>
+                </div>
+                <div class="comment-content">评论：{{item.content}}</div>
+              </div>
+            </div>
+            <!-- comments end -->
           </div>
         </div>
-        <!-- 2.2 店铺名 + 进入店铺 -->
-        <van-cell value="进入店铺" is-link icon="shop-o">
-          <!-- 2.2.1使用 title 插槽来自定义标题 -->
-          <template slot="title">
-            <!-- 2.2.1.1 店铺名 -->
-            <span>有名的店</span>
-            <!-- 2.2.1.2 店铺标签 -->
-            <van-tag type="danger">官方</van-tag>
-          </template>
-        </van-cell>
-      </van-panel>
-      <!-- 3、 商品详情 + 商品评价 -->
-      <van-tabs>
-        <van-tab v-for="index1 in 2" :key="index1">
-          <!--  -->
-          <div slot="title">
-            <van-icon v-if="index1===1">商品详情</van-icon>
-            <van-icon v-else>商品评价</van-icon>
-          </div>
-          <div v-if="index1===1">
-            <!-- 3.1 商品详情 -->
-            <div v-html="goodsinfo.detail"></div>
-          </div>
-          <div v-else>
-            <!-- 3.2商品评价 -->
-            <div v-if="comments.length === 0" class="goodsinfo-comments">暂无数据</div>
-            <div v-else>
-              <!--  comments 所有的评论 -->
-              <div v-for="item in comments" :key="item.id">
-                <!-- 3.2.1 匿名评价 -->
-                <div v-if="item.anonymous">
-                  <div class="comments-header">
-                    <div class="comments-user">
-                      <img :src="item.comment_avatar" class="user-img" />
-                      <div>
-                        <div>{{item.comment_nickname}}</div>
-                        <van-rate v-model="item.rate" />
-                      </div>
-                    </div>
-                    <div class="comments-time">{{item.comment_time}}</div>
-                  </div>
-                  <div class="comment-content">{{item.content}}</div>
-                </div>
-                <!-- 3.2.2 实名评价 -->
-                <div v-else>
-                  <div class="comments-header">
-                    <div class="comments-user">
-                      <img :src="item.user[0].avatar" class="user-img" />
-                      <div>
-                        <div>{{item.user[0].nickname}}</div>
-                        <van-rate v-model="item.rate" />
-                      </div>
-                    </div>
-                    <div class="comments-time">{{item.comment_time}}</div>
-                  </div>
-                  <div class="comment-content">{{item.content}}</div>
-                </div>
-              </div>
-              <!-- comments end -->
-            </div>
-          </div>
-        </van-tab>
-      </van-tabs>
-    </refeshs>
+      </van-tab>
+    </van-tabs>
+
     <!-- 4、 下方菜单栏 -->
     <van-goods-action>
       <!-- 4.1 联系客服 -->
-      <van-goods-action-icon icon="chat-o" text="客服" />
+      <van-goods-action-icon icon="chat-o" text="客服" @click="onlineserver" />
       <!-- 4.2 前往购物车 -->
       <van-goods-action-icon v-if="amountgoods===0" icon="cart-o" text="购物车" @click="jumpto" />
       <van-goods-action-icon
@@ -151,6 +150,7 @@
 </template>
 
 <script>
+import elastic from "../../components/pullrefush/Pullrefush";
 export default {
   data() {
     return {
@@ -185,9 +185,9 @@ export default {
       goods: {},
       customStepperConfig: {},
       // 限购量
-      quota: 10,
+      quota: 20,
       // 起售量
-      startSaleNum: 1,
+      startSaleNum: 2,
       // initialSku 默认选中的 sku
       initialSku: {
         // 键：skuKeyStr（sku 组合列表中当前类目对应的 key 值）
@@ -198,7 +198,9 @@ export default {
       }
     };
   },
-  components: {},
+  components: {
+    elastic
+  },
   methods: {
     // 返回上一步
     bcakbefore() {
@@ -210,11 +212,12 @@ export default {
         .goodOne(this.ids)
         .then(res => {
           this.comments = res.goods.comment;
-          // console.log(this.comments);
           // goodsinfo 获取单个商品信息
           this.goodsinfo = res.goods.goodsOne;
           // 预览图的图片数组
           this.images.push(this.goodsinfo.image);
+          this.images.push(this.goodsinfo.image);
+          this.images.push(this.goodsinfo.image_path);
           this.images.push(this.goodsinfo.image_path);
 
           this.sku.list = [
@@ -240,12 +243,7 @@ export default {
             }
           ];
 
-          this.goods = {
-            // 商品标题
-            title: this.goodsinfo.name,
-            // 默认商品 sku 缩略图
-            picture: this.goodsinfo.image
-          };
+          // this.goods = {};
 
           this.customStepperConfig = {
             // 自定义步进器超过限制时的回调
@@ -257,7 +255,6 @@ export default {
                 quotaUsed,
                 startSaleNum
               } = data;
-
               if (action === "minus") {
                 this.$toast(
                   startSaleNum > 1
@@ -269,11 +266,11 @@ export default {
               }
             },
             // 步进器变化的回调
-            handleStepperChange: currentValue => {},
-            // 库存
-            stockNum: 1999,
+            handleStepperChange: currentValue => {}
+            // // 库存
+            // stockNum: 1999,
             // 格式化库存
-            stockFormatter: stockNum => {}
+            // stockFormatter: stockNum => {}
           };
         })
         .catch(err => {
@@ -285,7 +282,6 @@ export default {
       this.$api
         .isCollection(this.ids)
         .then(res => {
-          // console.log(res);
           // 将收藏与否的结果 赋值给 收藏与否标识
           this.isCollect = res.isCollection;
         })
@@ -301,7 +297,6 @@ export default {
           .then(res => {
             // 弹框提示
             this.$toast.success(res.msg);
-            // console.log(res);
             // 重新查看商品是否被收藏
             this.getisCollection();
           })
@@ -309,11 +304,9 @@ export default {
             console.log(err);
           });
       } else {
-        // this.$toast.fail("未检测到登录记录，请先登录");
-
         this.$dialog
           .confirm({
-            message: "未检测到登录记录，前往登录"
+            title: "未检测到登录记录，前往登录"
           })
           .then(() => {
             this.$router.push("/login");
@@ -321,7 +314,6 @@ export default {
           .catch(() => {});
       }
     },
-
     // 取消收藏
     cancelCollect() {
       this.$api
@@ -340,11 +332,6 @@ export default {
     onChange(index) {
       this.index = index;
     },
-    // 图片翻页
-    onChanges(index) {
-      this.index = index;
-    },
-
     // 进入购物车
     jumpto() {
       this.$router.push("/shopingcars");
@@ -363,7 +350,7 @@ export default {
       } else {
         this.$dialog
           .confirm({
-            message: "未检测到登录记录，前往登录"
+            title: "未检测到登录记录，前往登录"
           })
           .then(() => {
             this.$router.push("/login");
@@ -384,13 +371,22 @@ export default {
       } else {
         this.$dialog
           .confirm({
-            message: "未检测到登录记录，前往登录"
+            title: "未检测到登录记录，前往登录"
           })
           .then(() => {
             this.$router.push("/login");
           })
           .catch(() => {});
       }
+    },
+    // 在线客服
+    onlineserver() {
+      this.$dialog
+        .confirm({
+          title: "亲亲，非常抱歉，客服小叮咚出去旅游啦"
+        })
+        .then(() => {})
+        .catch(() => {});
     }
   },
   mounted() {
@@ -462,7 +458,7 @@ export default {
   padding: 5px 10px;
 }
 .comment-content {
-  padding: 5px 10px;
+  padding: 5px 0 10px 30px;
   border-bottom: 5px solid rgb(255, 255, 255);
 }
 // 评论时间
