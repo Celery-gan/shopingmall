@@ -78,17 +78,27 @@ export default {
       this.$router.push("/userdetail");
     },
     loginout() {
-      this.$api
-        .loginOut({})
-        .then(res => {
-          localStorage.removeItem("nickname");
-          localStorage.removeItem("SearchHistory");
-          localStorage.removeItem("usercity");
-          this.$router.push("/");
+      this.$dialog
+        .confirm({
+          title: "退出登录？"
         })
-        .catch(err => {
-          console.log(err);
-        });
+        .then(() => {
+          this.$api
+            .loginOut({})
+            .then(res => {
+              console.log(res);
+              localStorage.removeItem("nickname");
+              localStorage.removeItem("SearchHistory");
+              localStorage.removeItem("usercity");
+              this.$store.state.amountgoods = 0;
+              this.$toast.success("退出成功");
+              this.$router.push("/");
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        })
+        .catch(() => {});
     },
     gotologin() {
       this.$router.push("/login");
@@ -103,16 +113,16 @@ export default {
     },
     // 待评价
     tobeEvaluated() {
-      this.$api
-        .tobeEvaluated()
-        .then(res => {
-          console.log(res);
-          this.tobeEvallen = res.data.count;
-          this.$store.state.tobeEvaluat = res.data.list;
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      if (localStorage.getItem("nickname")) {
+        this.$api
+          .tobeEvaluated()
+          .then(res => {
+            this.tobeEvallen = res.data.count;
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
     }
   },
   mounted() {

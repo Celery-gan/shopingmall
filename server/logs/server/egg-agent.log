@@ -440,3 +440,23 @@
 2020-01-09 08:21:34,786 INFO 8092 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"
 2020-01-09 08:21:34,787 INFO 8092 [egg-watcher:agent] watcher start success
 2020-01-09 08:21:34,830 INFO 8092 [egg:core] dump config after ready, 15ms
+2020-01-10 08:29:14,944 INFO 7476 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-10 08:29:14,962 INFO 7476 [egg:core] dump config after load, 10ms
+2020-01-10 08:29:15,253 INFO 7476 [egg-watcher] Start watching: ["C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"]
+2020-01-10 08:29:15,253 INFO 7476 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app"
+2020-01-10 08:29:15,255 INFO 7476 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config"
+2020-01-10 08:29:15,256 INFO 7476 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks"
+2020-01-10 08:29:15,257 INFO 7476 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy"
+2020-01-10 08:29:15,258 INFO 7476 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"
+2020-01-10 08:29:15,259 INFO 7476 [egg-watcher:agent] watcher start success
+2020-01-10 08:29:15,314 INFO 7476 [egg:core] dump config after ready, 14ms
+2020-01-10 08:30:21,332 INFO 8292 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\logs\\server","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"server-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-01-10 08:30:21,352 INFO 8292 [egg:core] dump config after load, 11ms
+2020-01-10 08:30:21,663 INFO 8292 [egg-watcher] Start watching: ["C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy","C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"]
+2020-01-10 08:30:21,663 INFO 8292 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app"
+2020-01-10 08:30:21,665 INFO 8292 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\config"
+2020-01-10 08:30:21,665 INFO 8292 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks"
+2020-01-10 08:30:21,666 INFO 8292 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\mocks_proxy"
+2020-01-10 08:30:21,667 INFO 8292 [egg-watcher] Start watching: "C:\\Users\\Administrator.USER-20191119MA\\Desktop\\ShopingMall\\server\\app.js"
+2020-01-10 08:30:21,669 INFO 8292 [egg-watcher:agent] watcher start success
+2020-01-10 08:30:21,715 INFO 8292 [egg:core] dump config after ready, 15ms

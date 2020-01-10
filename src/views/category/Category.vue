@@ -1,75 +1,65 @@
 <template>
-  <div>
+  <div class="bg">
     <mytop>
       <van-nav-bar title="分类"></van-nav-bar>
     </mytop>
     <div>
-      <!-- 页面上下平滑滚动 第一层盒子 -->
-      <div class="core-containers">
-        <!-- 第二层盒子 -->
-        <div class="wrappers" ref="wrapper">
-         
-
-          <div class="cate-body">
-            <!-- 侧边 -->
-            <div class="cate-sidebar">
-              <van-sidebar v-model="activeKey" @change="change">
-                <div v-for="item in categorys" :key="item.id">
-                  <van-sidebar-item :title="item.mallCategoryName"></van-sidebar-item>
+    
+        <div class="cate-body">
+          <!-- 侧边 -->
+          <div class="cate-sidebar">
+            <van-sidebar v-model="activeKey" @change="change">
+              <div v-for="item in categorys" :key="item.id">
+                <van-sidebar-item :title="item.mallCategoryName"></van-sidebar-item>
+              </div>
+            </van-sidebar>
+          </div>
+          <div class="cate-main">
+            <!-- 顶部 -->
+            <van-tabs v-model="active" @click="getcategory">
+              <van-tab v-for="item in bxMallSubDtos" :title="item.mallSubName" :key="item.id"></van-tab>
+            </van-tabs>
+              <cateres>
+            <!-- <div v-for="item in catelist" :key="item.id"> -->
+            <van-cell v-if="catelist.length===0">该类商品暂无</van-cell>
+            <van-cell v-else v-for="item in catelist" :key="item.id" @click="gotos(item.id)">
+              <div class="mysearch-list">
+                <div>
+                  <img :src="item.image" class="search-img" />
                 </div>
-              </van-sidebar>
-            </div>
-            <div class="cate-main">
-              <!-- 顶部 -->
-              <van-tabs v-model="active" @click="getcategory">
-                <van-tab v-for="item in bxMallSubDtos" :title="item.mallSubName" :key="item.id"></van-tab>
-              </van-tabs>
-              <!-- <div v-for="item in catelist" :key="item.id"> -->
-              <van-cell v-if="catelist.length===0">该类商品暂无</van-cell>
-              <van-cell v-else v-for="item in catelist" :key="item.id" @click="gotos(item.id)">
-                <div class="mysearch-list">
-                  <div>
-                    <img :src="item.image" class="search-img" />
-                  </div>
-                  <div>
-                    <div v-html="item.name" class="goods-name"></div>
-                    <div class="goods-price">
-                      <span class="persent-price">￥{{item.present_price}}</span>
-                      <span class="orl-price">{{item.orl_price}}</span>
-                    </div>
+                <div>
+                  <div v-html="item.name" class="goods-name"></div>
+                  <div class="goods-price">
+                    <span class="persent-price">￥{{item.present_price}}</span>
+                    <span class="orl-price">{{item.orl_price}}</span>
                   </div>
                 </div>
-              </van-cell>
-              <!-- </div> -->
-            </div>
+              </div>
+            </van-cell>
+              </cateres>
+            <!-- </div> -->
           </div>
         </div>
-      </div>
+  
     </div>
   </div>
 </template>
 
 <script>
-import BScroll from "better-scroll";
+import cateres from "../../components/pullrefush/Cateres";
 export default {
   data() {
     return {
       activeKey: 0,
       active: 0,
       catelist: [],
-      bxMallSubDtos: [],
+      bxMallSubDtos: []
     };
   },
-  components: {},
+  components: {
+    cateres
+  },
   methods: {
-    // 页面上下平滑滚动
-    init() {
-      this.bs = new BScroll(this.$refs.wrapper, {
-        scrollY: true,
-        click: true,
-        probeType: 3 // listening scroll hook
-      });
-    },
     //  category 分类查询  参数id：默认分类的id
     getcategory() {
       this.bxMallSubDtos = this.categorys[this.activeKey].bxMallSubDto;
@@ -102,7 +92,6 @@ export default {
       this.activeKey = this.$route.query.cateindex;
     }
     this.getcategory();
-    this.init();
   },
   watch: {},
   computed: {

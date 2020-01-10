@@ -59,7 +59,6 @@ export default {
         .getCollection()
         .then(res => {
           this.Collections = res.data.list;
-          // console.log(this.Collections);
         })
         .catch(err => {
           console.log(err);

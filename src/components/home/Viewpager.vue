@@ -123,6 +123,25 @@ export default {
         }
       });
     },
+    // 获取购物车数据
+    getCards() {
+     if(localStorage.getItem('nickname')){
+        this.$api
+        .getCard({})
+        .then(res => {
+          if (res.shopList.length !== 0) {
+            let count = 0;
+            res.shopList.map(item => {
+              count += item.count;
+            });
+            this.$store.state.amountgoods = count;
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+     }
+    },
     // 加入购物车
     addShops(ids) {
       if (localStorage.getItem("nickname")) {
@@ -130,6 +149,7 @@ export default {
           .addShop(ids)
           .then(res => {
             this.$toast.success(res.msg);
+            this.getCards();
           })
           .catch(err => {
             console.log(err);
@@ -143,6 +163,7 @@ export default {
     this.$nextTick(() => {
       this.personScroll();
     });
+    this.getCards();
   },
   watch: {},
   computed: {}

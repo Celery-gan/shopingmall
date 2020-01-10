@@ -52,58 +52,61 @@
         </template>
       </van-cell>
     </van-panel>
-    <!-- 3、 商品详情 + 商品评价 -->
-    <van-tabs>
-      <van-tab v-for="index1 in 2" :key="index1">
-        <!--  -->
-        <div slot="title">
-          <van-icon v-if="index1===1">商品详情</van-icon>
-          <van-icon v-else>商品评价</van-icon>
-        </div>
-        <div v-if="index1===1">
-          <!-- 3.1 商品详情 -->
-          <div v-html="goodsinfo.detail"></div>
-        </div>
+
+    <div ref="container">
+      <van-sticky :container="container">
+        <van-tabs @click="onClick">
+          <van-tab title="商品详情"></van-tab>
+          <van-tab title="商品评价"></van-tab>
+        </van-tabs>
+      </van-sticky>
+
+      <div v-if="indexs===0">
+        <!-- 3.1 商品详情 -->
+
+        <div v-html="goodsinfo.detail"></div>
+        <div class="null">hello</div>
+      </div>
+      <div v-else>
+        <!-- 3.2商品评价 -->
+        <div v-if="comments.length === 0" class="goodsinfo-comments">暂无数据</div>
         <div v-else>
-          <!-- 3.2商品评价 -->
-          <div v-if="comments.length === 0" class="goodsinfo-comments">暂无数据</div>
-          <div v-else>
-            <!--  comments 所有的评论 -->
-            <div v-for="item in comments" :key="item.id">
-              <!-- 3.2.1 匿名评价 -->
-              <div v-if="item.anonymous">
-                <div class="comments-header">
-                  <div class="comments-user">
-                    <img :src="item.comment_avatar" class="user-img" />
-                    <div>
-                      <div>{{item.comment_nickname}}</div>
-                      <van-rate v-model="item.rate" readonly />
-                    </div>
+          <!--  comments 所有的评论 -->
+          <div v-for="item in comments" :key="item.id">
+            <!-- 3.2.1 匿名评价 -->
+            <div v-if="item.anonymous">
+              <div class="comments-header">
+                <div class="comments-user">
+                  <img :src="item.comment_avatar" class="user-img" />
+                  <div>
+                    <div>{{item.comment_nickname}}</div>
+                    <van-rate v-model="item.rate" readonly />
                   </div>
-                  <div class="comments-time">{{item.comment_time}}</div>
                 </div>
-                <div class="comment-content">评论：{{item.content}}</div>
+                <div class="comments-time">{{item.comment_time}}</div>
               </div>
-              <!-- 3.2.2 实名评价 -->
-              <div v-else>
-                <div class="comments-header">
-                  <div class="comments-user">
-                    <img :src="item.user[0].avatar" class="user-img" />
-                    <div>
-                      <div>用户：{{item.user[0].nickname}}</div>
-                      <van-rate v-model="item.rate" readonly />
-                    </div>
-                  </div>
-                  <div class="comments-time">{{item.comment_time}}</div>
-                </div>
-                <div class="comment-content">评论：{{item.content}}</div>
-              </div>
+              <div class="comment-content">评论：{{item.content}}</div>
             </div>
-            <!-- comments end -->
+            <!-- 3.2.2 实名评价 -->
+            <div v-else>
+              <div class="comments-header">
+                <div class="comments-user">
+                  <img :src="item.user[0].avatar" class="user-img" />
+                  <div>
+                    <div>用户：{{item.user[0].nickname}}</div>
+                    <van-rate v-model="item.rate" readonly />
+                  </div>
+                </div>
+                <div class="comments-time">{{item.comment_time}}</div>
+              </div>
+              <div class="comment-content">评论：{{item.content}}</div>
+            </div>
           </div>
+          <!-- comments end -->
         </div>
-      </van-tab>
-    </van-tabs>
+        <div class="null">thank you</div>
+      </div>
+    </div>
 
     <!-- 4、 下方菜单栏 -->
     <van-goods-action>
@@ -150,10 +153,12 @@
 </template>
 
 <script>
-import elastic from "../../components/pullrefush/Pullrefush";
 export default {
   data() {
     return {
+      //  商品详情"商品评价标识 （0/1）
+      indexs: 0,
+      container: null,
       // 商品id
       ids: "",
       // 商品信息
@@ -185,7 +190,7 @@ export default {
       goods: {},
       customStepperConfig: {},
       // 限购量
-      quota: 20,
+      quota: 50,
       // 起售量
       startSaleNum: 2,
       // initialSku 默认选中的 sku
@@ -198,10 +203,12 @@ export default {
       }
     };
   },
-  components: {
-    elastic
-  },
+  components: {},
   methods: {
+    // 商品详情"商品评价互换
+    onClick(name, title) {
+      this.indexs = name;
+    },
     // 返回上一步
     bcakbefore() {
       history.back();
@@ -211,67 +218,77 @@ export default {
       this.$api
         .goodOne(this.ids)
         .then(res => {
-          this.comments = res.goods.comment;
-          // goodsinfo 获取单个商品信息
-          this.goodsinfo = res.goods.goodsOne;
-          // 预览图的图片数组
-          this.images.push(this.goodsinfo.image);
-          this.images.push(this.goodsinfo.image);
-          this.images.push(this.goodsinfo.image_path);
-          this.images.push(this.goodsinfo.image_path);
+          console.log(res);
+          if (res.goods.goodsOne !== undefined) {
+            this.comments = res.goods.comment;
+            // goodsinfo 获取单个商品信息
+            this.goodsinfo = res.goods.goodsOne;
+            // 预览图的图片数组
+            this.images.push(this.goodsinfo.image);
+            this.images.push(this.goodsinfo.image);
+            this.images.push(this.goodsinfo.image_path);
+            this.images.push(this.goodsinfo.image_path);
 
-          this.sku.list = [
-            {
-              id: this.ids, // skuId，下单时后端需要
-              price: this.goodsinfo.present_price * 100, // 价格（单位:分）
-              stock_num: 300, // 当前 sku 组合对应的库存
-              s1: "1215" // 规格类目 k_s 为 s1 的对应规格值 id
-            }
-          ];
-          this.sku.tree = [
-            {
-              k: "名称", // skuKeyName：规格类目名称
-              v: [
-                {
-                  id: "1215",
-                  name: this.goodsinfo.name,
-                  imgUrl: this.goodsinfo.image,
-                  previewImgUrl: this.goodsinfo.image_path
-                }
-              ],
-              k_s: "s1" // skuKeyStr：sku 组合列表（下方 list）中当前类目对应的 key 值，value 值会是从属于当前类目的一个规格值 id
-            }
-          ];
-
-          // this.goods = {};
-
-          this.customStepperConfig = {
-            // 自定义步进器超过限制时的回调
-            handleOverLimit: data => {
-              const {
-                action,
-                limitType,
-                quota,
-                quotaUsed,
-                startSaleNum
-              } = data;
-              if (action === "minus") {
-                this.$toast(
-                  startSaleNum > 1
-                    ? `${startSaleNum}件起售`
-                    : "至少选择一件商品"
-                );
-              } else if (action === "plus") {
-                this.$toast(`单次限购${quota}件`);
+            this.sku.list = [
+              {
+                id: this.ids, // skuId，下单时后端需要
+                price: this.goodsinfo.present_price * 100, // 价格（单位:分）
+                stock_num: 300, // 当前 sku 组合对应的库存
+                s1: "1215" // 规格类目 k_s 为 s1 的对应规格值 id
               }
-            },
-            // 步进器变化的回调
-            handleStepperChange: currentValue => {}
-            // // 库存
-            // stockNum: 1999,
-            // 格式化库存
-            // stockFormatter: stockNum => {}
-          };
+            ];
+            this.sku.tree = [
+              {
+                k: "名称", // skuKeyName：规格类目名称
+                v: [
+                  {
+                    id: "1215",
+                    name: this.goodsinfo.name,
+                    imgUrl: this.goodsinfo.image,
+                    previewImgUrl: this.goodsinfo.image_path
+                  }
+                ],
+                k_s: "s1" // skuKeyStr：sku 组合列表（下方 list）中当前类目对应的 key 值，value 值会是从属于当前类目的一个规格值 id
+              }
+            ];
+
+            // this.goods = {};
+
+            this.customStepperConfig = {
+              // 自定义步进器超过限制时的回调
+              handleOverLimit: data => {
+                const {
+                  action,
+                  limitType,
+                  quota,
+                  quotaUsed,
+                  startSaleNum
+                } = data;
+                if (action === "minus") {
+                  this.$toast(
+                    startSaleNum > 1
+                      ? `${startSaleNum}件起售`
+                      : "至少选择一件商品"
+                  );
+                } else if (action === "plus") {
+                  this.$toast(`单次限购${quota}件`);
+                }
+              },
+              // 步进器变化的回调
+              handleStepperChange: currentValue => {}
+            };
+          } else {
+            this.$dialog
+              .confirm({
+                title: "该商品已下架，请移步到其他相似商品"
+              })
+              .then(() => {
+                this.$router.push("/");
+              })
+              .catch(() => {
+                this.$router.push("/");
+              });
+          }
         })
         .catch(err => {
           console.log(err);
@@ -343,6 +360,21 @@ export default {
           .addShop(this.ids)
           .then(res => {
             this.$toast.success(res.msg);
+            // 获取购物车个数
+            this.$api
+              .getCard({})
+              .then(res => {
+                if (res.shopList.length !== 0) {
+                  let count = 0;
+                  res.shopList.map(item => {
+                    count += item.count;
+                  });
+                  this.$store.state.amountgoods = count;
+                }
+              })
+              .catch(err => {
+                console.log(err);
+              });
           })
           .catch(err => {
             console.log(err);
@@ -360,6 +392,7 @@ export default {
     },
     // 立即购买
     onBuyClicked(skuData) {
+      // 如果登陆了前往支付页面
       if (localStorage.getItem("nickname")) {
         let obj = {
           count: skuData.selectedNum,
@@ -368,7 +401,9 @@ export default {
         this.$store.state.payone = obj;
         this.$store.state.buyway = 1;
         this.$router.push({ name: "payMent" });
-      } else {
+      }
+      // 如果未登录 无法跳转
+      else {
         this.$dialog
           .confirm({
             title: "未检测到登录记录，前往登录"
@@ -379,7 +414,7 @@ export default {
           .catch(() => {});
       }
     },
-    // 在线客服
+    // 在线客服 不在线
     onlineserver() {
       this.$dialog
         .confirm({
@@ -390,10 +425,15 @@ export default {
     }
   },
   mounted() {
+    this.container = this.$refs.container;
+    // 获取用户名
     if (localStorage.getItem("nickname")) {
       this.nickname = localStorage.getItem("nickname");
     }
-    this.ids = this.$route.query.ids;
+    // 获取商品id
+    if (this.$route.query.ids) {
+      this.ids = this.$route.query.ids;
+    }
     // 获取单个商品信息
     this.getGoodOne();
     // 查看商品是否被收藏
@@ -401,10 +441,12 @@ export default {
   },
   watch: {},
   computed: {
+    // 获取购物车数量
     amountgoods() {
       return this.$store.state.amountgoods;
     }
   },
+  // 路由守卫 浏览数据去重
   beforeRouteLeave(to, from, next) {
     if (!this.$store.state.browsing.some(item => item.id === this.ids)) {
       this.$store.state.browsing.push(this.goodsinfo);
@@ -469,5 +511,8 @@ export default {
 .comments-user {
   display: flex;
   width: 200px;
+}
+.null {
+  height: 50px;
 }
 </style>

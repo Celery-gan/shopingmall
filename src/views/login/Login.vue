@@ -88,6 +88,7 @@ export default {
         .then(res => {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
+            this.$toast.success(res.msg);
             this.$router.push("/");
           } else {
             this.$toast(res.msg);
@@ -104,6 +105,7 @@ export default {
         .then(res => {
           if (res.code === 200) {
             localStorage.setItem("nickname", this.nickname);
+            this.$toast.success(res.msg);
             this.$router.push("/");
           } else {
             this.$toast(res.msg);

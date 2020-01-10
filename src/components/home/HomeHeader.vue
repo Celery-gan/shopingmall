@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flexbtw homeheader">
+    <div class="flexbtw">
       <!-- 定位城市 -->
       <div v-if="city" class="citys" @click="gotocity(city)">
         {{city}}
@@ -103,7 +103,4 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-.homeheader {
-  background: rgb(218, 211, 211);
-}
 </style>

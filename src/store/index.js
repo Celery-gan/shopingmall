@@ -10,8 +10,6 @@ export default new Vuex.Store({
         // 分类列表
         category: [],
         amountgoods: '',
-        // 待评价数量
-        tobeEvaluats: '',
         // 浏览历史
         browsing: [],
         // 选择地址

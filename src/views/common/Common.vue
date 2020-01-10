@@ -19,7 +19,8 @@
 export default {
   data() {
     return {
-      active: "home"
+      active: "home",
+      // amountgoods: 0
     };
   },
   components: {},
@@ -28,7 +29,9 @@ export default {
       this.$router.push(val);
     }
   },
-  mounted() {},
+  mounted() {
+    // this.amountgoods = localStorage.getItem("cartlen");
+  },
   watch: {},
   computed: {
     amountgoods() {

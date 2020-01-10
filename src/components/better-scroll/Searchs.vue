@@ -3,7 +3,7 @@
     <!-- 搜索框 + 取消搜索按钮 -->
     <form action="/">
       <!-- 搜索框通过watch来判断是否有商品 取消按钮使页面恢复到正常首页 -->
-      <van-search v-model="inputs" placeholder="请输入搜索关键词" show-action @cancel="onCancel" />
+      <van-search v-model="inputs" placeholder="请输入搜索关键词" show-action />
     </form>
 
     <!-- 如果输入框为空 显示搜索历史-->
@@ -55,7 +55,8 @@ export default {
       // 搜索结果列表
       searchlist: [],
       // 搜索历史
-      SearchHistory: []
+      SearchHistory: [],
+      flag: 1
     };
   },
   components: {},
@@ -64,58 +65,22 @@ export default {
     getsearch() {
       setTimeout(() => {
         this.$api
-          .search(this.inputs,flag)
+          .searches(this.inputs, this.flag)
           .then(res => {
+            console.log(res);
+            console.log(this.flag);
+            this.flag++;
             // 获得搜索列表
             this.searchlist = res.data.list;
             // 将搜索列表中关键字高亮设置
             this.searchlist.map(
               item => (item.name = this.$utils.keyWord(item.name, this.inputs))
             );
-            // 将搜索词存入搜索历史列表
-            let flag = this.SearchHistory.every(item => {
-              return item !== this.inputs;
-            });
-            if (flag || this.SearchHistory.length < 1) {
-              this.SearchHistory.push(this.inputs);
-              // 将搜索历史列表存在本地
-              localStorage.setItem("SearchHistory", this.SearchHistory);
-            }
           })
           .catch(err => {
             console.log(err);
           });
       }, 300);
-    },
-    // 删除搜索历史
-    delHistory() {
-      this.$dialog
-        .confirm({
-          title: "确认删除搜索历史吗？"
-        })
-        .then(() => {
-          this.SearchHistory = [];
-          localStorage.removeItem("SearchHistory");
-        })
-        .catch(() => {});
-    },
-    // 点击搜索历史的词语进行重新搜索
-    searchAgain(val) {
-      this.inputs = val;
-    },
-    // 点击搜索出来的商品 前往商品详情页
-    gotos(val) {
-      this.$router.push({
-        name: "detail",
-        query: {
-          ids: val
-        }
-      });
-    },
-    // 取消搜索 返回正常首页
-    onCancel() {
-      this.nu1 = -1;
-      this.$emit("send", this.nu1);
     }
   },
   mounted() {

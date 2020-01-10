@@ -71,7 +71,14 @@ export default {
   methods: {
     // 返回上页
     bcakbefore() {
-      history.back();
+      this.$dialog
+        .confirm({
+          title: "确认取消购买"
+        })
+        .then(() => {
+          history.back();
+        })
+        .catch(() => {});
     },
     // 获取默认地址
     getDefaultAddress() {
@@ -123,16 +130,24 @@ export default {
             orderId: ids
           };
         }
-        this.$api
-          .placeOrder(obj)
-          .then(res => {
-            // 弹框提示 返回首页
-            this.$toast.success(res.msg);
-            this.$router.push("/");
+
+        this.$dialog
+          .confirm({
+            title: "确认购买当前商品？"
           })
-          .catch(err => {
-            console.log(err);
-          });
+          .then(() => {
+            this.$api
+              .placeOrder(obj)
+              .then(res => {
+                // 弹框提示 返回首页
+                this.$toast.success(res.msg);
+                this.$router.push("/shopingcars");
+              })
+              .catch(err => {
+                console.log(err);
+              });
+          })
+          .catch(() => {});
       }
       // 如果没有地址 提示添加收货地址
       else {

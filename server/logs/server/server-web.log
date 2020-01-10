@@ -6094,3 +6094,424 @@ hostname: USER-20191119MA
 pid: 5636
 hostname: USER-20191119MA
 
+2020-01-10 09:00:03,988 ERROR 8432 [-/127.0.0.1/-/9ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 09:00:07,192 ERROR 8432 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 09:05:56,937 ERROR 8432 [-/127.0.0.1/-/4ms POST /v1/addShop] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.addShop (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:61:38)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 09:07:42,310 ERROR 8432 [-/127.0.0.1/-/4ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 09:08:12,034 ERROR 8432 [-/127.0.0.1/-/3ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 09:08:40,401 ERROR 8432 [-/127.0.0.1/-/2ms POST /v1/collection] nodejs.TypeError: Cannot read property 'id' of null
+    at OperatingGoodsController.collection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:16:24)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 09:11:48,747 ERROR 8432 [-/127.0.0.1/-/5ms POST /v1/addShop] nodejs.TypeError: Cannot read property 'present_price' of null
+    at OperatingGoodsController.addShop (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\controller\api\operatingGoods.js:61:38)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\app\middleware\isLogin.js:15:13
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-development@2.4.3@egg-development\app\middleware\egg_loader_trace.js:9:50
+    at async xframe (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg-security@2.7.1@egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-session@5.12.3@koa-session\index.js:41:7)
+    at async bodyParser (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:5)
+    at async C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_koa-static-cache@5.1.2@koa-static-cache\index.js:51:63
+    at async notfound (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\notfound.js:5:5)
+    at async meta (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_egg@2.26.0@egg\app\middleware\meta.js:12:5)
+
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 13:36:59,634 ERROR 8432 [-/127.0.0.1/-/24ms GET /v1/goods/one?id=24afea564e5248b5a2bc59da95f09911&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 17:32:12,082 ERROR 8432 [-/127.0.0.1/-/13ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -20
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -20"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:39,973 ERROR 8432 [-/127.0.0.1/-/18ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -20
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -20"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:39,987 ERROR 8432 [-/127.0.0.1/-/33ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -40
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -40"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:40,172 ERROR 8432 [-/127.0.0.1/-/11ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -60
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -60"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:40,388 ERROR 8432 [-/127.0.0.1/-/22ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -80
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -80"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:40,581 ERROR 8432 [-/127.0.0.1/-/32ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -100
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -100"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:40,698 ERROR 8432 [-/127.0.0.1/-/5ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -120
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -120"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:40,860 ERROR 8432 [-/127.0.0.1/-/2ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -140
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -140"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:41,068 ERROR 8432 [-/127.0.0.1/-/4ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -140
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -140"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:41,286 ERROR 8432 [-/127.0.0.1/-/5ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -160
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -160"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:43,902 ERROR 8432 [-/127.0.0.1/-/2ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -180
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -180"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:48,251 ERROR 8432 [-/127.0.0.1/-/2ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -200
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -200"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:48,937 ERROR 8432 [-/127.0.0.1/-/3ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -220
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -220"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:38:51,141 ERROR 8432 [-/127.0.0.1/-/5ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -240
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -240"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+
+2020-01-10 18:39:09,716 ERROR 8432 [-/127.0.0.1/-/5ms POST /v1/search] nodejs.MongoError: Skip value must be non-negative, but received: -20
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Skip value must be non-negative, but received: -20"
+code: 2
+codeName: "BadValue"
+name: "MongoError"
+pid: 8432
+hostname: USER-20191119MA
+

@@ -47,7 +47,7 @@ export default {
         this.$api
           .postAddress(obj)
           .then(res => {
-            this.$toast("修改成功");
+            this.$toast.success("地址修改成功");
             // 如果设置了默认选中，就使其默认
             if (content.isDefault === true) {
               this.$api
@@ -69,7 +69,7 @@ export default {
         this.$api
           .postAddress(this.list)
           .then(res => {
-            this.$toast("修改成功");
+            this.$toast.success("地址添加成功");
             history.back();
           })
           .catch(err => {
@@ -80,6 +80,7 @@ export default {
     // 删除信息
     onDelete() {
       // 如果传了id过来 才能删除
+      
       if (this.list._id !== "") {
         this.$api
           .deleteAddress(this.list._id)

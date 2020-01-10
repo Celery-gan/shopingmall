@@ -78,11 +78,7 @@ export default {
       // 3f
       flinfo3: [],
       // 热门商品
-      hotgood: [],
-      // 购物车数据
-      goodsinfo: [],
-      // 购物车数量
-      cartlen: 0
+      hotgood: []
     };
   },
   methods: {
@@ -119,29 +115,11 @@ export default {
     send(nu1) {
       this.nu1 = nu1;
     },
-    // 获取购物车数据
-    getCards() {
-      this.$api
-        .getCard({})
-        .then(res => {
-          this.cartlen = res.shopList.length;
-          localStorage.setItem("cartlen", res.shopList.length);
-          this.goodsinfo = res.shopList;
-          if (this.goodsinfo !== undefined) {
-            this.goodsinfo.map(item => {
-              item.mallPrice = item.mallPrice.toFixed(2);
-            });
-          }
-          this.$store.state.goodsinfo = this.goodsinfo;
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }
+   
   },
   mounted() {
     this.getrecommend();
-    this.getCards();
+
   },
   watch: {},
 
@@ -151,7 +129,6 @@ export default {
 
 <style lang='scss'>
 .mall-bg {
-  background: rgb(241, 241, 241);
   line-height: 30px;
   font-size: 16px;
 }

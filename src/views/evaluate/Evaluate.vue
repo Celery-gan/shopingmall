@@ -60,8 +60,8 @@ export default {
   data() {
     return {
       activeName: "a",
-      alreadyEvaluat: []
-      // tobeEvaluat: []
+      alreadyEvaluat: [],
+      tobeEvaluat: []
     };
   },
   components: {
@@ -72,19 +72,6 @@ export default {
     bcakbefore() {
       this.$router.push("/mine");
     },
-
-    // // 待评价
-    // tobeEvaluated() {
-    //   this.$api
-    //     .tobeEvaluated()
-    //     .then(res => {
-    //       this.tobeEvaluat = res.data.list;
-    //       this.$store.state.tobeEvaluats = this.tobeEvaluat.length;
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // },
     // 已评价
     alreadyEvaluated() {
       this.$api
@@ -101,18 +88,27 @@ export default {
     },
     gotosee(val) {
       this.$router.push({ name: "seeeval", query: { ratesid: val._id } });
+    },
+    // 待评价
+    tobeEvaluated() {
+      if (localStorage.getItem("nickname")) {
+        this.$api
+          .tobeEvaluated()
+          .then(res => {
+            this.tobeEvaluat = res.data.list;
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
     }
   },
   mounted() {
     this.alreadyEvaluated();
-    // this.tobeEvaluated();
+    this.tobeEvaluated();
   },
   watch: {},
-  computed: {
-    tobeEvaluat() {
-      return this.$store.state.tobeEvaluat;
-    }
-  }
+  computed: {}
 };
 </script>
 

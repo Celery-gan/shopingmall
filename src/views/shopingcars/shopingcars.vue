@@ -61,7 +61,7 @@
                   <van-stepper
                     v-model="item.count"
                     min="1"
-                    max="20"
+                    max="50"
                     integer
                     @change="editCart(item)"
                   />
@@ -81,7 +81,7 @@ export default {
   data() {
     return {
       nickname: "",
-      // goodsinfo: [],
+      goodsinfo: [],
       result: [],
       checked: false,
       arr: []
@@ -106,25 +106,6 @@ export default {
     tologin() {
       this.$router.push("/login");
     },
-    // // 获取购物车数据
-    // getCards() {
-    //   this.$api
-    //     .getCard({})
-    //     .then(res => {
-    //       this.goodsinfo = res.shopList;
-    //       // let sum = 0;
-    //       if (this.goodsinfo !== undefined) {
-    //         this.goodsinfo.map(item => {
-    //           // sum += item.count;
-    //           item.mallPrice = item.mallPrice.toFixed(2);
-    //         });
-    //       }
-    //       // this.$store.state.amountgoods = sum;
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //     });
-    // },
     // 选择某个商品
     checkitem(val) {
       val.check = !val.check;
@@ -146,7 +127,7 @@ export default {
           this.$api
             .deleteShop(delarr)
             .then(res => {
-              // this.getCards();
+              this.getCards();
               this.$toast.success(res.msg);
             })
             .catch(err => {
@@ -155,37 +136,76 @@ export default {
         })
         .catch(() => {});
     },
+    // 去结算页面
     gotopay() {
       let idlist = [];
       let count = this.arr[0].count;
       this.arr.map(item => {
         idlist.push(item.cid);
       });
-      let obj = {
-        orderId: idlist,
-        totalPrice: this.amountpay,
-        count: count,
-        list: this.arr
-      };
-      this.$store.state.paylists = obj;
-      this.$store.state.buyway = 2;
-      this.$router.push({ name: "payMent" });
+      let flag = this.arr.every(item => {
+        return item.count >= 2;
+      });
+      if (this.arr.every(item => item.count >= 2)) {
+        let obj = {
+          orderId: idlist,
+          totalPrice: this.amountpay,
+          count: count,
+          list: this.arr
+        };
+        this.$store.state.paylists = obj;
+        this.$store.state.buyway = 2;
+        this.$router.push({ name: "payMent" });
+      } else {
+        this.$toast.fail("本商城所有商品2件起售");
+      }
     },
     // 修改商品量
     editCart(val) {
+      let count = 0;
+      this.goodsinfo.map(item => {
+        count += item.count;
+      });
+      this.$store.state.amountgoods = count;
       this.$api
         .editCart(val.count, val.cid, val.mallPrice)
-        .then(res => {})
+        .then(res => {
+          if (!this.goodsinfo.some(item => item.check)) {
+            this.getCards();
+          }
+        })
         .catch(err => {
           console.log(err);
         });
+    },
+    // 获取购物车数据
+    getCards() {
+      if (localStorage.getItem("nickname")) {
+        this.$api
+          .getCard({})
+          .then(res => {
+            this.cartlen = res.shopList.length;
+            this.goodsinfo = res.shopList;
+            let count = 0;
+            if (this.goodsinfo !== undefined) {
+              this.goodsinfo.map(item => {
+                count += item.count;
+                item.mallPrice = item.mallPrice.toFixed(2);
+              });
+              this.$store.state.amountgoods = count;
+            }
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
     }
   },
   mounted() {
     if (localStorage.getItem("nickname")) {
       this.nickname = localStorage.getItem("nickname");
     }
-    // this.getCards();
+    this.getCards();
   },
   watch: {},
 
@@ -203,19 +223,6 @@ export default {
         });
       }
       return sum.toFixed(2);
-    },
-    // amountgoods() {
-    //   let sum = 0;
-    //   if (this.goodsinfo !== undefined) {
-    //     this.goodsinfo.map(item => {
-    //       sum += item.count;
-    //     });
-    //   }
-    //   this.$store.state.amountgoods = sum;
-    //   console.log(sum);
-    // }
-    goodsinfo() {
-      return this.$store.state.goodsinfo;
     }
   }
 };

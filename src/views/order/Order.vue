@@ -7,7 +7,7 @@
     </mytop>
     <div>
       <!-- 订单信息 -->
-      <van-tabs v-model="activeName" sticky>
+      <van-tabs v-model="activeName" sticky :swipe-threshold="swipe">
         <orderes>
           <!-- 全部页面 -->
           <van-tab title="全部" name="a">
@@ -93,7 +93,8 @@ export default {
       // 默认第一项
       activeName: "a",
       // 订单列表
-      orderlist: []
+      orderlist: [],
+      swipe:5
     };
   },
   components: {
