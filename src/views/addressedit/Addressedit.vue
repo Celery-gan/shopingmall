@@ -45,6 +45,8 @@ export default {
           id: this.list._id
         };
         this.$api
+
+        
           .postAddress(obj)
           .then(res => {
             this.$toast.success("地址修改成功");

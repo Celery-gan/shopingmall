@@ -22,7 +22,7 @@
         <!-- 如果搜索出了商品  -->
         <div v-else>
           <!-- 循环显示商品信息 -->
-          <van-cell v-for="item in searchlist" :key="item.id" @click="gotos(item.id)">
+          <van-cell v-for="item in searchlist" :key="item.id">
             <div class="mysearch-list">
               <img :src="item.image" class="search-img" />
               <div v-html="item.name" class="goods-name"></div>
@@ -32,7 +32,10 @@
       </div>
       <!-- 需要滚动的组件（可放入多个） -->
     </Better-scroll>
-
+    <!-- vue @click.native 原生点击事件：
+      给vue组件绑定事件时候，必须加上native ，不然不会生效（监听根元素的原生事件，使用 .native 修饰符）
+      等同于在自组件中：
+      子组件内部处理click事件然后向外发送click事件：$emit("click".fn)-->
     <Back-top @click.native="backclick" v-show="backtop"></Back-top>
   </div>
 </template>
@@ -66,19 +69,27 @@ export default {
     },
     //1.当滚到底部后，请求下一页的商品数据
     loadmore() {
-      if ((this.flag === this.maxpage)) {
+      console.log(this.maxpage, "max");
+      console.log(this.flag);
+      if (this.flag === this.maxpage) {
         this.$toast.fail("已经到最后一条数据了");
+        this.$refs.scroll.scroll.finishPullUp();
       } else {
         this.flag++;
         // console.log(this.flag);
         this.getsearch();
+        // 当上拉加载数据加载完毕后，需要调用此方法告诉 better-scroll 数据已加载。
         this.$refs.scroll.scroll.finishPullUp();
       }
     },
     //1.下拉 请求上一页的商品数据
     loadup() {
+      console.log(this.maxpage, "max");
+      console.log(this.flag);
       if (this.flag === 1) {
         this.$toast.fail("已经到第一条数据了");
+        // 当下拉刷新数据加载完毕后，需要调用此方法告诉 better-scroll 数据已加载。
+        this.$refs.scroll.scroll.finishPullDown();
       } else {
         this.flag--;
         // console.log(this.flag);
@@ -87,10 +98,10 @@ export default {
       }
     },
     getsearch() {
-      console.log(this.flag);
+      // console.log(this.flag);
       setTimeout(() => {
         this.$api
-          .searches(this.inputs, this.flag)
+          .search(this.inputs, this.flag)
           .then(res => {
             this.maxpage = Math.ceil(res.data.count / 20);
             this.searchlist = res.data.list;

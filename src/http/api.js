@@ -12,12 +12,6 @@ export default class Api {
     }
 
     static search(value, page = 1) {
-        return service.req('/search', {
-            value,
-            page
-        })
-    }
-    static searches(value, page) {
             return service.req('/search', {
                 value,
                 page

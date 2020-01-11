@@ -14,12 +14,15 @@
           <div v-if="SearchHistory.length >= 1" @click="delHistory">删除历史</div>
         </div>
         <van-cell v-if="SearchHistory.length < 1">暂无历史记录</van-cell>
-        <van-cell
+        <div v-else class="history">
+          <div v-for="item in SearchHistory" :key="item.id" @click="searchAgain(item)">{{item}}</div>
+        </div>
+        <!-- <van-cell
           v-else
           v-for="item in SearchHistory"
           :key="item.id"
           @click="searchAgain(item)"
-        >{{item}}</van-cell>
+        >{{item}}</van-cell>-->
       </div>
     </div>
     <!-- 如果搜索出来没有商品 提示没有商品 -->
@@ -64,7 +67,7 @@ export default {
     getsearch() {
       setTimeout(() => {
         this.$api
-          .search(this.inputs,flag)
+          .search(this.inputs)
           .then(res => {
             // 获得搜索列表
             this.searchlist = res.data.list;
@@ -72,15 +75,6 @@ export default {
             this.searchlist.map(
               item => (item.name = this.$utils.keyWord(item.name, this.inputs))
             );
-            // 将搜索词存入搜索历史列表
-            let flag = this.SearchHistory.every(item => {
-              return item !== this.inputs;
-            });
-            if (flag || this.SearchHistory.length < 1) {
-              this.SearchHistory.push(this.inputs);
-              // 将搜索历史列表存在本地
-              localStorage.setItem("SearchHistory", this.SearchHistory);
-            }
           })
           .catch(err => {
             console.log(err);
@@ -105,6 +99,16 @@ export default {
     },
     // 点击搜索出来的商品 前往商品详情页
     gotos(val) {
+      // 将搜索词存入搜索历史列表
+
+      if (
+        this.SearchHistory.every(item => item !== this.inputs) ||
+        this.SearchHistory.length < 1
+      ) {
+        this.SearchHistory.push(this.inputs);
+      }
+      // 将搜索历史列表存在本地
+      localStorage.setItem("SearchHistory", this.SearchHistory);
       this.$router.push({
         name: "detail",
         query: {
@@ -170,5 +174,18 @@ export default {
 .goods-name {
   margin: 0 8px;
   line-height: 20px;
+}
+.history {
+  background: rgb(255, 255, 255);
+  color: rgb(23, 119, 87);
+  display: flex;
+  padding: 5px 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  div {
+    width: 95px;
+    border: 1px solid rgb(223, 221, 221);
+    margin: 5px 10px;
+  }
 }
 </style>

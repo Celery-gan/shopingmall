@@ -19,7 +19,7 @@ export default {
   right: 10px;
   bottom: 60px;
 }
-.back-top img {
+.back-top span {
   width: 43px;
 }
 </style>

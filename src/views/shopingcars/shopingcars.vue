@@ -22,7 +22,7 @@
     </div>
     <!-- 如果已登录 且 购物车有商品 -->
     <div v-else>
-      <shopres>
+      <div class="cartcontrol">
         <div class="cart-header">
           <!-- 全选按钮 -->
           <div class="check">
@@ -43,6 +43,8 @@
             <div>请确认订单</div>
           </div>
         </div>
+      </div>
+      <shopres>
         <!-- 商品列表 -->
         <van-checkbox-group v-model="result" ref="checkboxGroup">
           <div v-for="(item,index) in goodsinfo" :key="item.id">
@@ -271,5 +273,9 @@ export default {
   margin: 10px auto;
   text-align: center;
   width: 200px;
+}
+.cartcontrol {
+  // background: rgb(241, 238, 238);
+  line-height: 48px;
 }
 </style>

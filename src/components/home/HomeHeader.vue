@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="heards">
     <div class="flexbtw">
       <!-- 定位城市 -->
       <div v-if="city" class="citys" @click="gotocity(city)">
@@ -103,4 +103,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+.heards {
+  z-index: 2;
+  background: #fff;
+}
 </style>

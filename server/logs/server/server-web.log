@@ -6515,3 +6515,247 @@ name: "MongoError"
 pid: 8432
 hostname: USER-20191119MA
 
+2020-01-11 09:50:34,971 ERROR 8228 [-/127.0.0.1/-/19ms GET /v1/goods/one?id=24afea564e5248b5a2bc59da95f09911&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 09:50:39,868 ERROR 8228 [-/127.0.0.1/-/3ms GET /v1/goods/one?id=418fc60784d04e71beffe1ce5174c947&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 09:50:45,668 ERROR 8228 [-/127.0.0.1/-/3ms GET /v1/goods/one?id=418fc60784d04e71beffe1ce5174c947&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 09:51:38,344 ERROR 8228 [-/127.0.0.1/-/4ms GET /v1/goods/one?id=24afea564e5248b5a2bc59da95f09911&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 09:52:08,815 ERROR 8228 [-/127.0.0.1/-/6ms GET /v1/goods/one?id=24afea564e5248b5a2bc59da95f09911&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 09:52:30,078 ERROR 8228 [-/127.0.0.1/-/4ms GET /v1/goods/one?id=24afea564e5248b5a2bc59da95f09911&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 09:52:52,712 ERROR 8228 [-/127.0.0.1/-/7ms GET /v1/goods/one?id=418fc60784d04e71beffe1ce5174c947&page=undefined] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 11:21:38,096 ERROR 8228 [-/127.0.0.1/-/29ms GET /v1/goods/one?id=24afea564e5248b5a2bc59da95f09911&page=0] nodejs.MongoError: Argument to $skip cannot be negative
+    at Connection.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\pool.js:466:61)
+    at Connection.emit (events.js:210:5)
+    at processMessage (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:384:10)
+    at Socket.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongodb@3.4.1@mongodb\lib\core\connection\connection.js:553:15)
+    at Socket.emit (events.js:210:5)
+    at addChunk (_stream_readable.js:326:12)
+    at readableAddChunk (_stream_readable.js:301:11)
+    at Socket.Readable.push (_stream_readable.js:235:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23)
+ok: 0
+errmsg: "Argument to $skip cannot be negative"
+code: 15956
+codeName: "Location15956"
+name: "MongoError"
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 14:57:24,072 ERROR 8228 [-/127.0.0.1/-/16ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '24afea564e5248b5a2bc59da95f09911': '' }" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '24afea564e5248b5a2bc59da95f09911': '' }\""
+kind: "string"
+value: {"24afea564e5248b5a2bc59da95f09911":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '24afea564e5248b5a2bc59da95f09911': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 14:58:01,125 ERROR 8228 [-/127.0.0.1/-/3ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '24afea564e5248b5a2bc59da95f09911': '' }" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '24afea564e5248b5a2bc59da95f09911': '' }\""
+kind: "string"
+value: {"24afea564e5248b5a2bc59da95f09911":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '24afea564e5248b5a2bc59da95f09911': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 14:58:22,477 ERROR 8228 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '238bc2e023844769a6b67d9a4c04b2ea': '' }" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '238bc2e023844769a6b67d9a4c04b2ea': '' }\""
+kind: "string"
+value: {"238bc2e023844769a6b67d9a4c04b2ea":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '238bc2e023844769a6b67d9a4c04b2ea': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8228
+hostname: USER-20191119MA
+
+2020-01-11 14:58:22,504 ERROR 8228 [-/127.0.0.1/-/1ms POST /v1/deleteShop] nodejs.CastError: Cast to string failed for value "{ '24afea564e5248b5a2bc59da95f09911': '' }" at path "cid" for model "ShopList"
+    at new CastError (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\error\cast.js:39:11)
+    at SchemaString.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:583:11)
+    at SchemaString.SchemaType.applySetters (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:975:12)
+    at SchemaString.SchemaType._castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1389:15)
+    at SchemaString.castForQuery (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schema\string.js:645:15)
+    at SchemaString.SchemaType.castForQueryWrapper (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\schematype.js:1358:15)
+    at cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\cast.js:260:34)
+    at model.Query.Query.cast (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:4698:12)
+    at model.Query.Query._castConditions (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:1876:10)
+    at model.Query.<anonymous> (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\query.js:2826:8)
+    at model.Query._wrappedThunk [as _deleteMany] (C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_mongoose@5.8.3@mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at C:\Users\Administrator.USER-20191119MA\Desktop\ShopingMall\server\node_modules\_kareem@2.3.1@kareem\index.js:369:33
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+stringValue: "\"{ '24afea564e5248b5a2bc59da95f09911': '' }\""
+kind: "string"
+value: {"24afea564e5248b5a2bc59da95f09911":""}
+path: "cid"
+reason: null
+message: "Cast to string failed for value \"{ '24afea564e5248b5a2bc59da95f09911': '' }\" at path \"cid\" for model \"ShopList\""
+name: "CastError"
+model: undefined
+pid: 8228
+hostname: USER-20191119MA
+

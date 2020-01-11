@@ -45,7 +45,7 @@ export default {
 <style scoped lang='scss'>
 .core-containers {
   .wrapper {
-    height: 565px;
+    height: 515px;
     overflow: hidden;
   }
 }

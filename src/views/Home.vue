@@ -145,10 +145,11 @@ export default {
   flex-wrap: wrap;
 }
 .searchs {
-  width: 77%;
-  padding: 3px 2px;
+  width: 71%;
+  padding: 0 2px;
 }
 .citys {
+  width: 26%;
   font-size: 14px;
   margin: 3px;
 }
